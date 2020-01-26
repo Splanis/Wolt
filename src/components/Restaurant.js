@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import "./Restaurant.scss";
 
-const Restaurant = ({ name, price, image }) => {
+const Restaurant = ({ name, city, description, image }) => {
     return (
-        <div>
-            <h3>{name}</h3>
-            <p>{price}</p>
-            <img src={image} style={{width: '500px'}}/>
+        <div className="restaurant-card">
+            <img src={image} />
+            <div className="restaurant-content">
+                <h3>{name}</h3>
+                <p>{description}</p>
+                <p>{city}</p>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Restaurant
+export default Restaurant;

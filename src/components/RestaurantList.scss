@@ -1,0 +1,13 @@
+.restaurant-list {
+    padding-top: 80px;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: 40px;
+}

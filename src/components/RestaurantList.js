@@ -1,15 +1,25 @@
 import React, { useContext } from "react";
 import { RestaurantsContext } from "./RestaurantsContext";
 import Restaurant from "./Restaurant";
+import "./RestaurantList.scss";
 
 const RestaurantList = () => {
     const [restaurants, setRestaurants] = useContext(RestaurantsContext);
+
     return (
-        <div>
+        <div className="restaurant-list">
             <h1>Restaurants</h1>
-            {restaurants.map(restaurant => (
-                <Restaurant key={restaurant.blurhash} name={restaurant.name} price={restaurant.price} image={restaurant.image}/>
-            ))}
+            <div className="restaurant-grid">
+                {restaurants.map(restaurant => (
+                    <Restaurant
+                        key={restaurant.name}
+                        name={restaurant.name}
+                        city={restaurant.city}
+                        description={restaurant.description}
+                        image={restaurant.image}
+                    />
+                ))}{" "}
+            </div>
         </div>
     );
 };

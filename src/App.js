@@ -1,14 +1,17 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { RestaurantsProvider } from "./components/RestaurantsContext";
 import RestaurantList from "./components/RestaurantList";
+import Navbar from "./components/layout/Navbar";
 
 const App = () => {
     return (
         <RestaurantsProvider>
             <div className="App">
-                <h1>Wolt</h1>
-                <RestaurantList />
+                <Navbar />
+                <main>
+                    <RestaurantList />
+                </main>
             </div>
         </RestaurantsProvider>
     );
