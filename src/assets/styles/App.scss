@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam|Source+Sans+Pro&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

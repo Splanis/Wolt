@@ -1,0 +1,39 @@
+.restaurant-list {
+	padding-top: 70px;
+	margin: 20px;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	.sort {
+		width: 200px;
+		display: flex;
+		align-items: center;
+	}
+
+	.style-change-btns {
+		display: flex;
+		justify-content: flex-end;
+		width: 200px;
+
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		img {
+			height: 20px;
+		}
+	}
+
+	.restaurant-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(200px, 1fr));
+		grid-gap: 40px;
+	}
+}
