@@ -1,14 +1,23 @@
 import React from "react";
-import "./Navbar.scss";
-import logo from '../../assets/icons/user-icon.png';
+import "../../assets/styles/Navbar.scss";
+import userIcon from "../../assets/icons/user-icon.png";
+import searchIcon from "../../assets/icons/search-icon.png";
 
 const Navbar = () => {
 	return (
 		<div className="navbar">
 			<h1>Wolt</h1>
-			<input type="text" name="search" id="search" placeholder="Search store, food, location.." />
+			<div className="search-bar">
+				<input
+					type="text"
+					name="search"
+					id="search"
+					placeholder="Search..."
+				/>
+				<img src={searchIcon} className="search-icon" />
+			</div>
 			<div className="user">
-				<img className="user-icon" src={logo} />
+				<img className="user-icon" src={userIcon} />
 				<p>Username</p>
 			</div>
 		</div>
