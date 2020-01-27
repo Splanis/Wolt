@@ -12,12 +12,8 @@ $secondary-color: #00b3e3;
 	width: 100%;
 	z-index: 10;
 
-	h1 {
-		height: 70px;
-		color: $secondary-color;
-		font-family: "Kalam", cursive;
-		font-size: 3rem;
-		margin-left: 10px;
+	.logo {
+		height: 65px;
 	}
 
 	.search-bar {
