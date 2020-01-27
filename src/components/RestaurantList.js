@@ -28,6 +28,7 @@ const RestaurantList = () => {
                         description={restaurant.description}
                         image={restaurant.image}
                         delivery_price={restaurant.delivery_price}
+                        tags={restaurant.tags}
                     />
                 ))}
             </div>
