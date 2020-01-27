@@ -3,8 +3,6 @@ import { RestaurantsContext } from "./RestaurantsContext";
 import Sort from "./Sort";
 import Restaurant from "./Restaurant";
 import "../assets/styles/RestaurantList.scss";
-import gridIcon from "../assets/icons/grid.png";
-import listIcon from "../assets/icons/list.png";
 
 const RestaurantList = () => {
     const [restaurants] = useContext(RestaurantsContext);
@@ -12,20 +10,14 @@ const RestaurantList = () => {
     return (
         <div className="restaurant-list">
             <div className="header">
+                <h1>Delivery</h1>
                 <div className="sort">
                     Sort by:
                     <Sort />
                 </div>
-                <h1>Restaurants</h1>
-                <div className="style-change-btns">
-                    <button>
-                        <img src={gridIcon} alt="grid" />
-                    </button>
-                    <button>
-                        <img className="list-icon" src={listIcon} alt="list" />
-                    </button>
-                </div>
             </div>
+
+            <hr className="divider" />
 
             <div className="restaurant-grid">
                 {restaurants.map(restaurant => (
