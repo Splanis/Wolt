@@ -2,43 +2,42 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-	padding-top: 70px;
+    padding-top: 70px;
     margin: 20px;
     width: 100%;
 
-	.header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 20px;
-		margin-left: 10px;
-	}
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 
-	.sort {
-		display: flex;
-		align-items: center;
-		margin-right: 10px;
-	}
+    .sort {
+        display: flex;
+        align-items: center;
+    }
 
-	.restaurant-grid {
+    .restaurant-grid {
         display: grid;
         justify-items: center;
         justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		grid-gap: 20px;
-	}
+        grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+        grid-gap: 20px;
+    }
 }
 
 .divider {
-	margin: 0px 10px 25px 10px;
+	margin-bottom: 25px;
+	color: rgba(0,0,0,0.6);
 }
 
 @media (max-width: 600px) {
-	.header {
-		flex-direction: column;
-	}
+    .header {
+        flex-direction: column;
+    }
 
-	.sort {
-		margin-top: 10px;
-	}
+    .sort {
+        margin-top: 10px;
+    }
 }
