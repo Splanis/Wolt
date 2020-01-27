@@ -8,7 +8,6 @@ import woltLogo from "../../assets/icons/wolt-logo.png";
 const Navbar = () => {
     return (
         <div className="navbar">
-
             <img className="logo" src={woltLogo} alt="logo" />
             <button className="mobile-menu-btn">
                 <img src={menuIcon} alt="menu" />

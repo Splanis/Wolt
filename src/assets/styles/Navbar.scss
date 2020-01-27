@@ -2,80 +2,84 @@ $primary-color: #333333;
 $secondary-color: #00b3e3;
 
 .navbar {
-	background-color: $primary-color;
-	height: 70px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: white;
-	position: fixed;
-	width: 100%;
-	z-index: 10;
+    background-color: $primary-color;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 
-	.logo {
-		height: 65px;
-	}
+    .logo {
+        height: 50px;
+    }
 
-	.search-bar {
-		border: 1px solid white;
-		border-radius: 25px;
-		padding: 10px;
-		display: flex;
-		align-items: center;
+    .search-bar {
+        padding: 5px;
+        display: flex;
 
-		input {
-			background-color: $primary-color;
-			border: none;
-			padding: 0px;
-			color: white;
-			font-size: 1.2rem;
-			width: 180px;
-			
-			&:focus {
-				outline: none;
-			}
-		}
-	}
+        input {
+            background-color: $primary-color;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            width: 150px;
 
-	.user {
-		display: flex;
-		align-items: center;
-		
-		p {
-			padding: 5px;
-		}
-	}
+            &:focus {
+                outline: none;
+            }
+        }
 
-	.user-icon,
-	.search-icon {
-		height: 30px;
-		filter: invert(100%);
-	}
+        img {
+            height: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+
+        p {
+            padding: 5px;
+        }
+    }
+
+    .user-icon,
+    .search-icon {
+        height: 30px;
+        filter: invert(100%);
+    }
 }
 
 @media (max-width: 600px) {
-	.navbar {
-		justify-content: space-between;
+    .navbar {
+        justify-content: space-between;
 
-		.search-bar,
-		.user {
-			display: none;
-		}
+        .search-bar,
+        .user {
+            display: none;
+        }
 
-		.mobile-menu-btn {
-			background: $primary-color;
-			border: none;
-			margin-right: 10px;
+        .mobile-menu-btn {
+            background: $primary-color;
+            border: none;
+            margin-right: 10px;
 
-			img {
-				filter: invert(100%);
-			}
-		}
-	}
+            img {
+                filter: invert(100%);
+            }
+        }
+    }
 }
 
 @media (min-width: 600px) {
-	.mobile-menu-btn {
-		display: none;
-	}
+    .mobile-menu-btn {
+        display: none;
+    }
 }
