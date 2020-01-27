@@ -30,6 +30,10 @@ $secondary-color: #00b3e3;
 			color: white;
 			font-size: 1.2rem;
 			width: 180px;
+			
+			&:focus {
+				outline: none;
+			}
 		}
 	}
 
