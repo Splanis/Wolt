@@ -1,14 +1,17 @@
 import React from "react";
 import "../assets/styles/Restaurant.scss";
 
-const Restaurant = ({ name, city, description, image, delivery_price, tags }) => {
+const Restaurant = ({ name, blurhash, description, image, delivery_price, tags }) => {
     return (
         <div className="restaurant-card">
-            <img src={image} alt="restaurant" />
+            <div className="image">
+                <img src={image} alt="restaurant" />
+            </div>
             <div className="restaurant-content">
-                <h2>{name}</h2>
+                <h3>{name}</h3>
                 <p className="description">{description}</p>
-                <p>
+                {/* <hr className="divider" /> */}
+                <p className="tags">
                     Delivery: {delivery_price / 100}€ - {tags.join(", ")}
                 </p>
             </div>
@@ -16,4 +19,4 @@ const Restaurant = ({ name, city, description, image, delivery_price, tags }) =>
     );
 };
 
-export default Restaurant; 
+export default Restaurant;
