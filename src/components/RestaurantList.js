@@ -10,7 +10,7 @@ const RestaurantList = () => {
     return (
         <div className="restaurant-list">
             <div className="header">
-                <h1>Delivery</h1>
+                <h2>Restaurants open & online</h2>
                 <div className="sort">
                     Sort by:
                     <Sort />
