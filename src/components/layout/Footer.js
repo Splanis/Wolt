@@ -5,14 +5,20 @@ import facebook from "../../assets/icons/facebook.png";
 import linkedin from "../../assets/icons/linkedin.png";
 import twitter from "../../assets/icons/twitter.png";
 import woltLogo from "../../assets/icons/wolt-logo.png";
-import androidApple from "../../assets/icons/android-apple.png";
+import apple from "../../assets/icons/apple.png";
+import android from "../../assets/icons/android.png";
 
 const Footer = () => {
     return (
         <div className="footer">
             <div className="download">
                 <h2>Download the app</h2>
-                <img src={androidApple} alt="android-apple" />
+                <a href="https://play.google.com/store/apps/details?id=com.wolt.android&hl=en">
+                    <img src={android} alt="android" />
+                </a>
+                <a href="https://apps.apple.com/us/app/wolt-food-delivery/id943905271">
+                    <img src={apple} alt="apple" />
+                </a>
                 <p>©Copyrighted 2020.</p>
             </div>
             <div className="about">
@@ -21,8 +27,7 @@ const Footer = () => {
                 <span>For restaurants</span>
                 <span>For companies</span>
                 <span>Jobs</span>
-                <br/>
-                <span>Terms and conditions</span>
+                <div>Terms and conditions</div>
             </div>
             <div className="socials">
                 <img className="wolt-logo" src={woltLogo} alt="logo" />
