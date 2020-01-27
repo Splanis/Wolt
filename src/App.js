@@ -11,7 +11,7 @@ const App = () => {
         <RestaurantsProvider>
             <div className="App">
                 <Navbar />
-                <Sidenav className="sidenav"/>
+                <Sidenav className="sidenav" />
                 <main>
                     <RestaurantList />
                 </main>
