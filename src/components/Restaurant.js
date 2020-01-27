@@ -1,14 +1,14 @@
 import React from "react";
 import "../assets/styles/Restaurant.scss";
 
-const Restaurant = ({ name, blurhash, description, image, delivery_price, tags }) => {
+const Restaurant = ({ name, description, image, delivery_price, tags }) => {
     return (
         <div className="restaurant-card">
             <div className="image">
                 <img src={image} alt="restaurant" />
             </div>
             <div className="restaurant-content">
-                <h3>{name}</h3>
+                <h2>{name}</h2>
                 <p className="description">{description}</p>
                 {/* <hr className="divider" /> */}
                 <p className="tags">
