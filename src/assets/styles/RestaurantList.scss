@@ -1,6 +1,10 @@
 .restaurant-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 	padding-top: 70px;
-	margin: 20px;
+    margin: 20px;
+    width: 90%;
 
 	.header {
 		display: flex;
@@ -32,8 +36,10 @@
 	}
 
 	.restaurant-grid {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(200px, 1fr));
-		grid-gap: 40px;
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		grid-gap: 30px;
 	}
 }
