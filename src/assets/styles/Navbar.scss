@@ -53,7 +53,6 @@ $secondary-color: #00b3e3;
     .user-icon,
     .search-icon {
         height: 30px;
-        filter: invert(100%);
     }
 }
 
@@ -70,10 +69,6 @@ $secondary-color: #00b3e3;
             background: $primary-color;
             border: none;
             margin-right: 10px;
-
-            img {
-                filter: invert(100%);
-            }
         }
     }
 }

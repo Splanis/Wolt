@@ -58,7 +58,6 @@ $secondary-color: #00b3e3;
             .social-btns {
                 img {
                     height: 50px;
-                    filter: invert(100%);
                     margin: 10px;
                     cursor: pointer;
                     transition: 0.2s ease-in-out;
@@ -80,33 +79,34 @@ $secondary-color: #00b3e3;
         background-color: $primary-color;
         color: white;
         padding: 20px;
-        
+
         div {
             margin: 5px 0;
         }
 
-        .download, .socials, .about {
+        .download,
+        .socials,
+        .about {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-        .download {
-            order: 3;
-        }
-
-        .about { 
-            order: 2;
-        }
-
         .socials {
             order: 1;
         }
 
+        .about {
+            order: 2;
+        }
+
+        .download {
+            order: 3;
+        }
+
         .social-btns {
             img {
-                filter: invert(100%);
                 margin: 10px;
                 cursor: pointer;
                 transition: 0.2s ease-in-out;
