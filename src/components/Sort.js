@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { RestaurantsContext } from "./RestaurantsContext";
 import "../assets/styles/Sort.scss";
-import arrowDown from "../assets/icons/arrow-down.png";
 
 const Sort = () => {
 	const [restaurants, sortRestaurants] = useContext(RestaurantsContext);
