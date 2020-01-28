@@ -22,7 +22,7 @@ const Restaurants = () => {
                         <img src={gridIcon} alt="grid" />
                     </button>
                     <button className="list-btn" onClick={() => layoutToggle(false)}>
-                        <img src={listIcon} alt="grid" />
+                        <img src={listIcon} alt="list" />
                     </button>
                 </div>
             </div>

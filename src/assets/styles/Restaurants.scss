@@ -16,13 +16,14 @@
     .layout-btns {
         margin-left: 20px;
 
-        .grid-btn, .list-btn {
+        .grid-btn,
+        .list-btn {
             padding: 3px;
             margin: 3px;
             border: none;
             background-color: transparent;
-           
-            &:hover { 
+
+            &:hover {
                 transform: scale(1.1);
             }
         }
@@ -59,6 +60,7 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
+// Media Queries
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
