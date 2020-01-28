@@ -12,7 +12,6 @@ const RestaurantList = () => {
             <div className="header">
                 <h2>Restaurants open & online</h2>
                 <div className="sort">
-                    {/* Sort by: */}
                     <Sort />
                 </div>
             </div>
@@ -29,6 +28,7 @@ const RestaurantList = () => {
                         image={restaurant.image}
                         delivery_price={restaurant.delivery_price}
                         tags={restaurant.tags}
+                        blurhash={restaurant.blurhash}
                     />
                 ))}
             </div>
