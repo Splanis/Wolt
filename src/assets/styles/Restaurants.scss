@@ -1,4 +1,4 @@
-.restaurant-list {
+.restaurants {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,23 +13,50 @@
         margin-bottom: 20px;
     }
 
+    .layout-btns {
+        margin-left: 20px;
+
+        .grid-btn, .list-btn {
+            padding: 3px;
+            margin: 3px;
+            border: none;
+            background-color: transparent;
+           
+            &:hover { 
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            height: 20px;
+        }
+    }
+
     .sort {
         display: flex;
         align-items: center;
+        margin-left: auto;
     }
 
-    .restaurant-grid {
+    .layout-grid {
         display: grid;
         justify-items: center;
         justify-content: center;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         grid-gap: 20px;
     }
+
+    .layout-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .divider {
-	margin-bottom: 25px;
-	color: rgba(0,0,0,0.6);
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 600px) {
@@ -39,5 +66,9 @@
 
     .sort {
         margin-top: 10px;
+    }
+
+    .layout-btns {
+        display: none;
     }
 }
