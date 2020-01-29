@@ -3,26 +3,30 @@ import { RestaurantsContext } from "./RestaurantsContext";
 import "../assets/styles/Sort.scss";
 
 const Sort = () => {
-    const [restaurants, sortRestaurants] = useContext(RestaurantsContext);
+    const [restaurants, sortRestaurants, unsortedRestaurants] = useContext(RestaurantsContext);
 
     const handleSort = e => {
-        if (e.target.value === "ascending") {
-            sortRestaurants(restaurants =>
-                [...restaurants].sort((restaurants1, restaurants2) => (restaurants1.name < restaurants2.name ? -1 : 1))
-            );
-        } else if (e.target.value === "descending") {
-            sortRestaurants(restaurants =>
-                [...restaurants].sort((restaurants1, restaurants2) => (restaurants1.name > restaurants2.name ? -1 : 1))
-            );
+        switch (e.target.value) {
+            case "nonSorted":
+                sortRestaurants(unsortedRestaurants);
+                break;
+            case "ascending":
+                sortRestaurants(restaurants =>
+                    [...restaurants].sort((restaurants1, restaurants2) => (restaurants1.name < restaurants2.name ? -1 : 1))
+                );
+                break;
+            case "descending":
+                sortRestaurants(restaurants =>
+                    [...restaurants].sort((restaurants1, restaurants2) => (restaurants1.name > restaurants2.name ? -1 : 1))
+                );
+                break;
         }
     };
 
     return (
         <div className="select-box">
             <select name="sort" id="sort" onChange={handleSort}>
-                <option value="nonSorted" disabled={true} default={true}>
-                    Sort By
-                </option>
+                <option value="nonSorted" selected>Sort By</option>
                 <option value="ascending">Alphabetical: Ascending</option>
                 <option value="descending">Alphabetical: Descending</option>
             </select>
