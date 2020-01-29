@@ -25,7 +25,7 @@ const Restaurants = () => {
                         <img src={gridIcon} alt="grid" />
                     </button>
                     <button className="list-btn" onClick={() => setGrid(false)}>
-                        <img src={listIcon} alt="list" />
+                        <img className="list-img" src={listIcon} alt="list" />
                     </button>
                 </div>
             </div>

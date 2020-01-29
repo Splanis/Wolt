@@ -26,7 +26,7 @@ const Sort = () => {
     };
 
     return (
-        <div className="select-box">
+        <div>
             <select name="sort" id="sort" onChange={handleSort}>
                 <option value="nonSorted" defaultValue>Sort By</option>
                 <option value="ascending">Alphabetical: Ascending</option>

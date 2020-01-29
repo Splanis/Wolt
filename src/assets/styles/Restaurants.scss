@@ -28,9 +28,17 @@
             }
         }
 
+        .list-img {
+            transform: scale(1.15);
+        }
+
         button {
             &:focus {
                 outline: none;
+            }
+
+            &:hover {
+                cursor: pointer;
             }
         }
 
