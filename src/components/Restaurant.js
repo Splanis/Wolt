@@ -12,7 +12,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                 <div className="image">
                     <ProgressiveImage src={image}>
                         {(image, loading) => {
-                            return loading ? placeholder : <img src={image} />;
+                            return loading ? placeholder : <img src={image} alt=""/>;
                         }}
                     </ProgressiveImage>
                 </div>
