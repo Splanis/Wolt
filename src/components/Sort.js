@@ -23,8 +23,8 @@ const Sort = () => {
                 <option value="nonSorted" disabled="true" selected="true">
                     Sort By
                 </option>
-                <option value="ascending">Ascending</option>
-                <option value="descending">Descending</option>
+                <option value="ascending">Alphabetical: Ascending</option>
+                <option value="descending">Alphabetical: Descending</option>
             </select>
         </div>
     );

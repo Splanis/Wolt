@@ -1,11 +1,15 @@
 select {
-    background: white;
     border: none;
     padding: 4px;
     padding-right: 20px;
     appearance: none;
+    background: transparent;
     background-image: url("../icons/arrow-down.png");
     background-repeat: no-repeat;
     background-size: 15px;
-    background-position: 95%;
+    background-position: right;
+
+    &:focus {
+        outline:0;
+    }
 }
