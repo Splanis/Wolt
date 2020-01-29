@@ -8,20 +8,20 @@ import listIcon from "../assets/icons/list.png";
 
 const Restaurants = () => {
     const [restaurants] = useContext(RestaurantsContext);
-    const [isGrid, layoutToggle] = useState(true);
+    const [isGrid, setGrid] = useState(true);
 
     return (
         <div className="restaurants">
             <div className="header">
                 <h2>Restaurants open & online</h2>
                 <div className="sort">
-                    <Sort />
+                    <Sort /> 
                 </div>
                 <div className="layout-btns">
-                    <button className="grid-btn" onClick={() => layoutToggle(true)}>
+                    <button className="grid-btn" onClick={() => setGrid(true)}>
                         <img src={gridIcon} alt="grid" />
                     </button>
-                    <button className="list-btn" onClick={() => layoutToggle(false)}>
+                    <button className="list-btn" onClick={() => setGrid(false)}>
                         <img src={listIcon} alt="list" />
                     </button>
                 </div>
