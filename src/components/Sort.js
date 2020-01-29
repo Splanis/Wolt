@@ -21,12 +21,14 @@ const Sort = () => {
                 );
                 break;
         }
+        // Used spread operator to take restaurants and sort them ascending and descending by name property 
+        // Added '? -1 : 1' to handle sorting at Google Chrome / Safari
     };
 
     return (
         <div className="select-box">
             <select name="sort" id="sort" onChange={handleSort}>
-                <option value="nonSorted" selected>Sort By</option>
+                <option value="nonSorted" defaultValue>Sort By</option>
                 <option value="ascending">Alphabetical: Ascending</option>
                 <option value="descending">Alphabetical: Descending</option>
             </select>

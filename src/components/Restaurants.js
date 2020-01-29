@@ -7,7 +7,10 @@ import gridIcon from "../assets/icons/grid.png";
 import listIcon from "../assets/icons/list.png";
 
 const Restaurants = () => {
-    const [restaurants] = useContext(RestaurantsContext);
+    // Getting the restaurants data from our Restaurants Context API
+    const [restaurants] = useContext(RestaurantsContext); 
+    
+    // State for the Layout Style, if isGrid == True then layout is Grid else layouy is List
     const [isGrid, setGrid] = useState(true);
 
     return (
@@ -28,11 +31,13 @@ const Restaurants = () => {
             </div>
 
             <hr className="divider" />
-
-            <div className={isGrid ? "layout-grid" : "layout-list"}>
+            
+            {/* If isGrid == True then active CSS class is layout-grid else active CSS class is layout-list */}
+            <div className={isGrid ? "layout-grid" : "layout-list"}> 
+                {/* Mapping all the Restaurants */}
                 {restaurants.map(restaurant => (
                     <Restaurant
-                        key={restaurant.name}
+                        key={restaurant.name} // In real world key whould be some ID
                         name={restaurant.name}
                         city={restaurant.city}
                         description={restaurant.description}

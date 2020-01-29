@@ -9,7 +9,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
     return (
         <div className="restaurant-card">
             <div className={isGrid ? "restaurant-card-grid" : "restaurant-card-list"}>
-                <div className="image">
+                <div className="restaurant-image">
                     <ProgressiveImage src={image}>
                         {(image, loading) => {
                             return loading ? placeholder : <img src={image} alt=""/>;
@@ -17,9 +17,9 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                     </ProgressiveImage>
                 </div>
                 <div className="restaurant-content">
-                    <h2>{name}</h2>
-                    <p className="description">{description}</p>
-                    <p className="tags">
+                    <h2 className="restaurant-title">{name}</h2>
+                    <p className="restaurant-description">{description}</p>
+                    <p className="restaurant-tags">
                         Delivery: {delivery_price / 100}€ - {tags.join(", ")}
                     </p>
                 </div>

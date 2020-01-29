@@ -8,17 +8,14 @@ import woltLogo from "../../assets/icons/wolt-logo.png";
 import apple from "../../assets/icons/apple.png";
 import android from "../../assets/icons/android.png";
 
+// The Footer contain is not functional, it's just for styling
 const Footer = () => {
     return (
         <div className="footer">
             <div className="download">
                 <h2>Download the app</h2>
-                <a href="https://play.google.com/store/apps/details?id=com.wolt.android&hl=en">
-                    <img src={android} alt="android" />
-                </a>
-                <a href="https://apps.apple.com/us/app/wolt-food-delivery/id943905271">
-                    <img src={apple} alt="apple" />
-                </a>
+                <img src={android} alt="android" />
+                <img src={apple} alt="apple" />
                 <p>©Copyrighted 2020.</p>
             </div>
             <div className="about">
@@ -31,7 +28,7 @@ const Footer = () => {
             </div>
             <div className="socials">
                 <img className="wolt-logo" src={woltLogo} alt="logo" />
-                <h2>Find us</h2>
+                <h2>Find us on</h2>
                 <div className="social-btns">
                     <img src={facebook} alt="facebook" />
                     <img src={instagram} alt="instagram" />
