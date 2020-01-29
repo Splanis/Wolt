@@ -20,7 +20,7 @@ const Sort = () => {
     return (
         <div className="select-box">
             <select name="sort" id="sort" onChange={handleSort}>
-                <option value="nonSorted" disabled="true" selected="true">
+                <option value="nonSorted" disabled={true} default={true}>
                     Sort By
                 </option>
                 <option value="ascending">Alphabetical: Ascending</option>
