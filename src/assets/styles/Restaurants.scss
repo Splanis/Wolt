@@ -28,6 +28,12 @@
             }
         }
 
+        button {
+            &:focus {
+                outline: none;
+            }
+        }
+
         img {
             height: 20px;
         }
