@@ -2,7 +2,7 @@
 This is my pre-assignment task for Wolt's engineering intern position.
 
 # Overview
-This project was developed with React library. First of all, exclusively functional Components were used as they are more simple, comprehensive and understandable. The project logic is simple. Inside the <App /> Component there are two basic layout Components, <Navbar /> and <Footer />. The third Component is <Restaurants /> Component. <Restaurants /> Component gets its data from a Context API Component, <RestaurantsContext />. Context API was used as it's a good way to handle State globally in big projects in real-word. Inside <Restaurants /> Component there two Components. The first Component is <Sort /> which handles the alphabetically sort of Restaurants in ascending and descending. The second Component is <Restaurant /> which displays each Restaurant data like image, name, description, etc.
+This project was developed with React library. First of all, exclusively functional Components were used as they are more simple, comprehensive and understandable. The project logic is simple. Inside the 'App' Component there are two basic layout Components, 'Navbar' and ''. The third Component is 'RestaurantsComponent'. 'Restaurants' Component gets its data from a Context API Component, 'RestaurantsContext'. Context API was used as it's a good way to handle State globally in big projects in real-word. Inside 'Restaurants' Component there two Components. The first Component is 'Sort' which handles the alphabetically sort of Restaurants in ascending and descending. The second Component is 'Restaurant' which displays each Restaurant data like image, name, description, etc.
 
 # Requirements
 The only requirement you will need to run the project is Node.js with NPM. 
