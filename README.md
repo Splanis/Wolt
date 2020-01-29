@@ -1,69 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wolt Summer 2020 Internships - Engineering Pre-assignment Front End Project
+This is my pre-assignment task for Wolt's engineering intern position.
 
-## Available Scripts
+# Overview
+This project was developed with React library. First of all, exclusively functional Components were used as they are more simple, comprehensive and understandable. The project logic is simple. Inside the <App /> Component there are two basic layout Components, <Navbar /> and <Footer />. The third Component is <Restaurants /> Component. <Restaurants /> Component gets its data from a Context API Component, <RestaurantsContext />. Context API was used as it's a good way to handle State globally in big projects in real-word. Inside <Restaurants /> Component there two Components. The first Component is <Sort /> which handles the alphabetically sort of Restaurants in ascending and descending. The second Component is <Restaurant /> which displays each Restaurant data like image, name, description, etc.
 
-In the project directory, you can run:
+# Requirements
+The only requirement you will need to run the project is Node.js with NPM. 
 
-### `npm start`
+To see if you have it installed just type
+  
+    $ node --version
+    v12.10.0
+    % npm --version
+    6.10.3
+    
+To install it:
+#### For Windows
+* Just download and install it from the official website https://nodejs.org/en/download/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### For MacOS
+    $ brew update
+    & brew install node
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### For Linux 
+    $ curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -sudo apt-get install -y nodejs
+    $ sudo apt-get install -y nodejs
 
-### `npm test`
+## Install Dependencies
+Type:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    $ cd Wolt
+    $ npm install
 
-### `npm run build`
+# Run Project
+Type:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    $ npm start
+This will run the project on http://localhost:3000/
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Bonus task: Blurhash
+After some googling I found your implementation of blurhash with React (https://github.com/woltapp/react-blurhash) so I used react-progressive-image Component to display the blurhash while loading the real image.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# Wolt
+# A few words about myself
+My name is Marios and I was born in Greece. I study Computer Science in University of West Attica (ex. Technological Educational Institute of Athens) and I am going to graduate next year. I took Programming up about 8 months ago with some Java and C++ and Web Development about 5 months ago with HTML, CSS, Javascript and Python.
