@@ -4,6 +4,8 @@ select {
     padding: 4px;
     padding-right: 20px;
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background: transparent;
     background-image: url("../icons/arrow-down.png");
     background-repeat: no-repeat;
