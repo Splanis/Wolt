@@ -13,7 +13,9 @@ $secondary-color: #00b3e3;
     z-index: 10;
 
     .logo {
-        height: 50px;
+        height: 60px;
+        margin-left: 10px;
+        width: 150px;
     }
 
     .search-bar {
@@ -41,16 +43,15 @@ $secondary-color: #00b3e3;
         }
     }
 
-    .user {
+    .login-register {
         display: flex;
         align-items: center;
-
+        width: 150px;
         p {
-            padding: 5px;
+            padding: 10px;
         }
     }
 
-    .user-icon,
     .search-icon {
         height: 30px;
     }
@@ -61,7 +62,7 @@ $secondary-color: #00b3e3;
         justify-content: space-between;
 
         .search-bar,
-        .user {
+        .login-register {
             display: none;
         }
 

@@ -12,13 +12,14 @@ const Navbar = () => {
             <button className="mobile-menu-btn">
                 <img src={menuIcon} alt="menu" />
             </button>
+            {/* Searchbar and Loging-Register is not functional, it's just for styling */}
             <div className="search-bar">
                 <input type="text" name="search" id="search" placeholder="Search..." />
                 <img src={searchIcon} alt="search" className="search-icon" />
             </div>
-            <div className="user">
-                <img className="user-icon" alt="user" src={userIcon} />
-                <p>Username</p>
+            <div className="login-register">
+                <p>Login</p>
+                <p>Register</p>
             </div>
         </div>
     );
