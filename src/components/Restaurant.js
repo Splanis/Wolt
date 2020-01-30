@@ -3,7 +3,7 @@ import "../assets/styles/Restaurant.scss";
 import { Blurhash } from "react-blurhash";
 import ProgressiveImage from "react-progressive-image";
 
-const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, isGrid }) => {
+const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, isGrid }) => {
     const placeholder = <Blurhash hash={blurhash} width={350} height={350} resolutionX={32} resolutionY={32} punch={1} />;
 
     return (
@@ -12,7 +12,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                 <div className="restaurant-image">
                     <ProgressiveImage src={image}>
                         {(image, loading) => {
-                            return loading ? placeholder : <img src={image} alt=""/>;
+                            return loading ? placeholder : <img src={image} alt="" className={online ? "" : "closed"}/>;
                         }}
                     </ProgressiveImage>
                 </div>
