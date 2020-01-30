@@ -13,10 +13,13 @@ const Restaurants = () => {
     // State for the Layout Style, if isGrid == True then layout is Grid else layouy is List
     const [isGrid, setGrid] = useState(true);
 
+    // Counting all restaurants that are online
+    const restaurantsOnline = restaurants.filter(restaurant => restaurant.online == true).length;
+ 
     return (
         <div className="restaurants">
             <div className="header">
-                <h2>{restaurants.length} Restaurants open & online</h2>
+                <h2>{restaurantsOnline} Restaurants open & online</h2>
                 <div className="sort">
                     <Sort />
                 </div>
@@ -45,6 +48,7 @@ const Restaurants = () => {
                         delivery_price={restaurant.delivery_price}
                         tags={restaurant.tags}
                         blurhash={restaurant.blurhash}
+                        online={restaurant.online}
                         isGrid={isGrid}
                     />
                 ))}
