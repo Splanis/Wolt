@@ -1,7 +1,6 @@
 .restaurants {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-top: 70px;
     margin: 20px;
     width: 100%;
@@ -74,15 +73,19 @@
     }
 }
 
-
 // Media Queries
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .header {
         flex-direction: column;
+
+        .open-restaurants {
+            font-size: 1.3rem;
+        }
     }
 
     .sort {
-        margin-top: 10px;
+        margin: auto;
+        margin-top: 10px !important;
     }
 
     .layout-btns {

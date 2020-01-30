@@ -19,7 +19,7 @@ const Restaurants = () => {
     return (
         <div className="restaurants">
             <div className="header">
-                <h2>{restaurantsOnline} Restaurants open & online</h2>
+                <h2 className="open-restaurants">{restaurantsOnline} Restaurants open & online</h2>
                 <div className="sort">
                     <Sort />
                 </div>
