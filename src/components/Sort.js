@@ -7,7 +7,7 @@ const Sort = () => {
 
     const handleSort = e => {
         switch (e.target.value) {
-            case "nonSorted":
+            case "rating":
                 sortRestaurants(unsortedRestaurants);
                 break;
             case "ascending":
@@ -21,17 +21,23 @@ const Sort = () => {
                 );
                 break;
         }
-        // Used spread operator to take restaurants and sort them ascending and descending by name property 
+        // Used spread operator to take restaurants and sort them ascending and descending by name property
         // Added '? -1 : 1' to handle sorting at Google Chrome / Safari
     };
 
     return (
-        <div>
-            <select name="sort" id="sort" onChange={handleSort}>
-                <option value="nonSorted" defaultValue>Sort By</option>
-                <option value="ascending">Alphabetical: Ascending</option>
-                <option value="descending">Alphabetical: Descending</option>
-            </select>
+        <div className="Sorting">
+            <p>Sort by:</p>
+            {/* This is not actually by rating, just the default sort from the json */}
+            <button value="rating" onClick={handleSort}>
+                Rating
+            </button>
+            <button value="ascending" onClick={handleSort}>
+                A-Z
+            </button>
+            <button value="descending" onClick={handleSort}>
+                Z-A
+            </button>
         </div>
     );
 };

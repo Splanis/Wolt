@@ -15,21 +15,23 @@ const Restaurants = () => {
 
     // Counting all restaurants that are online
     const restaurantsOnline = restaurants.filter(restaurant => restaurant.online == true).length;
- 
+
     return (
         <div className="restaurants">
             <div className="header">
                 <h2 className="open-restaurants">{restaurantsOnline} Restaurants open & online</h2>
-                <div className="sort">
-                    <Sort />
-                </div>
-                <div className="layout-btns">
-                    <button className="grid-btn" onClick={() => setGrid(true)}>
-                        <img src={gridIcon} alt="grid" />
-                    </button>
-                    <button className="list-btn" onClick={() => setGrid(false)}>
-                        <img className="list-img" src={listIcon} alt="list" />
-                    </button>
+                <div className="buttons">
+                    <div className="sort">
+                        <Sort />
+                    </div>
+                    <div className="layout-btns">
+                        <button className="grid-btn" onClick={() => setGrid(true)}>
+                            <img src={gridIcon} alt="grid" />
+                        </button>
+                        <button className="list-btn" onClick={() => setGrid(false)}>
+                            <img className="list-img" src={listIcon} alt="list" />
+                        </button>
+                    </div>
                 </div>
             </div>
 

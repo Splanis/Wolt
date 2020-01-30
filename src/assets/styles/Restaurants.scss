@@ -6,55 +6,59 @@
     width: 100%;
 
     .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sort {
+            display: flex;
+            align-items: center;
+        }
+
+        .layout-btns {
+            margin-left: 20px;
+            display: flex;
+
+            .grid-btn,
+            .list-btn {
+                padding: 3px;
+                margin: 5px;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.5),
+                    inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+                img {
+                    height: 20px;
+                }
+
+                .list-img {
+                    transform: scale(1.15);
+                }
+
+                &:hover {
+                    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1), inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+                        inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+                    cursor: pointer;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
     }
 
     .divider {
         margin-bottom: 25px;
         color: rgba(0, 0, 0, 0.6);
-    }
-
-    .layout-btns {
-        margin-left: 20px;
-
-        .grid-btn,
-        .list-btn {
-            padding: 3px;
-            margin: 3px;
-            border: none;
-            background-color: transparent;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-
-        .list-img {
-            transform: scale(1.15);
-        }
-
-        button {
-            &:focus {
-                outline: none;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        img {
-            height: 20px;
-        }
-    }
-
-    .sort {
-        display: flex;
-        align-items: center;
-        margin-left: auto;
     }
 
     .layout-grid {
@@ -76,19 +80,18 @@
 // Media Queries
 @media (max-width: 800px) {
     .header {
-        flex-direction: column;
-
         .open-restaurants {
             font-size: 1.3rem;
+            text-align: center;
         }
-    }
 
-    .sort {
-        margin: auto;
-        margin-top: 10px !important;
-    }
+        .sort {
+            margin: auto;
+            margin-top: 10px !important;
+        }
 
-    .layout-btns {
-        display: none;
+        .layout-btns {
+            display: none !important;
+        }
     }
 }
