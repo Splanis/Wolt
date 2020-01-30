@@ -5,7 +5,7 @@ $secondary-color: #00b3e3;
     background-color: $primary-color;
     height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: white;
     position: fixed;
@@ -16,66 +16,12 @@ $secondary-color: #00b3e3;
         height: 60px;
         margin-left: 10px;
         width: 150px;
-    }
-
-    .search-bar {
-        padding: 5px;
-        display: flex;
-
-        input {
-            background-color: $primary-color;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            width: 150px;
-
-            &:focus {
-                outline: none;
-            }
-        }
-
-        img {
-            height: 20px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-
-    .login-register {
-        display: flex;
-        align-items: center;
-        width: 150px;
-        p {
-            padding: 10px;
-        }
-    }
-
-    .search-icon {
-        height: 30px;
+        animation: fadeIn 0.8s;
     }
 }
 
-@media (max-width: 800px) {
-    .navbar {
-        justify-content: space-between;
-
-        .search-bar,
-        .login-register {
-            display: none;
-        }
-
-        .mobile-menu-btn {
-            background: $primary-color;
-            border: none;
-            margin-right: 10px;
-        }
-    }
-}
-
-@media (min-width: 800px) {
-    .mobile-menu-btn {
-        display: none;
+@keyframes fadeIn {
+    from {
+        margin-bottom: 120px;
     }
 }
