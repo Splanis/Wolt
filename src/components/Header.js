@@ -12,10 +12,10 @@ const Header = ({ restaurantsOnline, toGrid, toList }) => {
             <div className="buttons">
                 <Sort />
                 <div className="layout-btns">
-                    <Button value="grid" className="grid-btn" onClick={toGrid}>
+                    <Button className="grid-btn" onClick={toGrid}>
                         <img src={gridIcon} alt="grid" />
                     </Button>
-                    <Button value="list" className="list-btn" onClick={toList}>
+                    <Button className="list-btn" onClick={toList}>
                         <img className="list-img" src={listIcon} alt="list" />
                     </Button>
                 </div>
