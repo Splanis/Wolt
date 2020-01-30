@@ -6,27 +6,29 @@ import styled from "styled-components";
 const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, isGrid }) => {
     const placeholder = <Blurhash hash={blurhash} width={350} height={350} resolutionX={32} resolutionY={32} punch={1} />;
 
-    let gridProps = {};
+    const gridProps = {};
     if (isGrid) {
         gridProps.isGrid = isGrid;
     }
 
-    let onlineProps = {};
+    const onlineProps = {};
     if (online) {
         onlineProps.online = online;
     }
 
+    console.log(onlineProps)
+
     return (
         <RestaurantCard {...gridProps}>
             <RestaurantImage {...gridProps}>
-                <ProgressiveImage src={image} {...onlineProps}>
+                <ProgressiveImage src={image} >
                     {(image, loading) => {
                         // ProgressiveImage Component loads placeholder (Blurhash Component) while loading the real image
-                        return loading ? placeholder : <img src={image} alt="" />;
+                        return loading ? placeholder : <img src={image} alt="" className={online ? null : "closed"} />;
                         // If the restaurant is not online, it gets className 'closed' which means it has black & white image
                     }}
                 </ProgressiveImage>
-                {/* <p className={online ? null : "offline"}>Offline</p> */}
+                <p className={online ? null : "offline"}>Offline</p>
                 <Offline></Offline>
             </RestaurantImage>
             <RestaurantContent>
@@ -97,7 +99,6 @@ const RestaurantImage = styled.div`
         height: 100%;
         border-radius: 3px 3px 0 0;
         transition: all 0.5s;
-        filter: ${props => (props.online ? "grayscale(100%)" : null)};
     }
 
     .offline {
@@ -140,7 +141,6 @@ const RestaurantContent = styled.div`
 `;
 
 const Offline = styled.div`
-    display: ${prop => prop.isGrid};
     font-size: 3rem;
     color: white;
     text-shadow: 0px 0px 6px #000000;

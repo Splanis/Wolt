@@ -5,7 +5,7 @@ import listIcon from "../assets/icons/list.png";
 import Button from "./styled-components/Button";
 import Sort from "./Sort";
 
-const Header = ({restaurantsOnline, toGrid, toList}) => {
+const Header = ({ restaurantsOnline, toGrid, toList }) => {
     return (
         <HeaderContain>
             <h2 className="open-restaurants">{restaurantsOnline} Restaurants open & online</h2>
