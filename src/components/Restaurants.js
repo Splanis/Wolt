@@ -37,7 +37,6 @@ const Restaurants = () => {
 
             <Divider />
 
-            {/* If isGrid == True then active CSS class is layout-grid else active CSS class is layout-list */}
             {/* <RestaurantsMap className={isGrid ? "layout-grid" : "layout-list"}> */}
             <RestaurantsMap {...gridProps}>
                 {/* Mapping all the Restaurants */}
