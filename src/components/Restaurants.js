@@ -10,7 +10,7 @@ const Restaurants = () => {
     // Getting the restaurants data from our Restaurants Context API
     const [restaurants] = useContext(RestaurantsContext);
 
-    // State for the Layout Style, if isGrid == True then layout is Grid else layouy is List
+    // State for the Layout Style, if isGrid == True then layout is Grid else the layout is List
     const [isGrid, setGrid] = useState(true);
 
     // Counting all restaurants that are online
