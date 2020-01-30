@@ -1,6 +1,5 @@
 import React from "react";
 import "../../assets/styles/Navbar.scss";
-import userIcon from "../../assets/icons/user-icon.png";
 import searchIcon from "../../assets/icons/search-icon.png";
 import menuIcon from "../../assets/icons/menu-icon.png";
 import woltLogo from "../../assets/icons/wolt-logo.png";
