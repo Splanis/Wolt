@@ -1,8 +1,8 @@
 import React from "react";
 import "./assets/styles/App.scss";
 import { RestaurantsProvider } from "./components/RestaurantsContext";
-import Restaurants from "./components/Restaurants";
 import Navbar from "./components/layout/Navbar";
+import Restaurants from "./components/Restaurants";
 import Footer from "./components/layout/Footer";
 
 const App = () => {

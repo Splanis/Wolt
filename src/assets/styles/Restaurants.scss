@@ -13,6 +13,11 @@
         margin-bottom: 20px;
     }
 
+    .divider {
+        margin-bottom: 25px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
     .layout-btns {
         margin-left: 20px;
 
@@ -69,10 +74,6 @@
     }
 }
 
-.divider {
-    margin-bottom: 25px;
-    color: rgba(0, 0, 0, 0.6);
-}
 
 // Media Queries
 @media (max-width: 600px) {
