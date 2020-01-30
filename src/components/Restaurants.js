@@ -42,7 +42,6 @@ const Restaurants = () => {
                     <Restaurant
                         key={restaurant.name} // In real world key whould be some ID
                         name={restaurant.name}
-                        city={restaurant.city}
                         description={restaurant.description}
                         image={restaurant.image}
                         delivery_price={restaurant.delivery_price}
