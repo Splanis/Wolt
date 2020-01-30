@@ -11,7 +11,7 @@ To see if you have it installed just type
   
     $ node --version
     v12.10.0
-    % npm --version
+    $ npm --version
     6.10.3
     
 To install it:
@@ -20,7 +20,7 @@ To install it:
 
 #### For MacOS
     $ brew update
-    & brew install node
+    $ brew install node
 
 #### For Linux 
     $ curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -sudo apt-get install -y nodejs
