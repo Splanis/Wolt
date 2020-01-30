@@ -21,12 +21,26 @@
         height: 65%;
         overflow: hidden;
         border-radius: 10px 10px 0 0;
+        position: relative;
 
         img {
             width: 100%;
             height: 100%;
             border-radius: 10px 10px 0 0;
             transition: all 0.5s;
+        }
+
+        .offline {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 0px 0px 6px #000000;
+            z-index: 5;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            top: 40%;
+            left: 0%;
+            width: 100%
         }
     }
 
@@ -55,7 +69,7 @@
         .restaurant-tags {
             flex: 1;
             width: 100%;
-            border-top: 1px dotted rgba(0, 0, 0, 0.3);
+            border-top: 1px dashed rgba(0, 0, 0, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -86,12 +100,13 @@
         width: 400px;
         height: 100%;
         overflow: hidden;
+        position: relative;
 
         img {
             width: 100%;
             height: 100%;
             transition: all 0.5s;
-        }
+        }  
     }
 
     .restaurant-content {
@@ -117,7 +132,7 @@
 
         .restaurant-tags {
             flex: 1;
-            border-top: 1px dotted rgba(0, 0, 0, 0.3);
+            border-top: 1px dashed rgba(0, 0, 0, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -148,6 +163,7 @@
             height: 65%;
             overflow: hidden;
             border-radius: 10px 10px 0 0;
+            
 
             img {
                 width: 100%;
@@ -200,4 +216,16 @@
 
 .closed {
     filter: grayscale(100%);
+}
+
+.offline {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0px 0px 6px #000000;
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 35%;
+    width: 100%;
 }

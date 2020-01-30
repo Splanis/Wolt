@@ -17,6 +17,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                             // If the restaurant is not online, it gets className 'closed' which means it has black & white image
                         }}
                     </ProgressiveImage>
+                    <p className={online ? null : "offline"}>Offline</p>
                 </div>
                 <div className="restaurant-content">
                     <h2 className="restaurant-title">{name}</h2>
