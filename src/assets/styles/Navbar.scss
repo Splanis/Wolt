@@ -57,7 +57,7 @@ $secondary-color: #00b3e3;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .navbar {
         justify-content: space-between;
 
@@ -74,7 +74,7 @@ $secondary-color: #00b3e3;
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .mobile-menu-btn {
         display: none;
     }
