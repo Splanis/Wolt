@@ -1,22 +1,30 @@
 import React from "react";
-import "./assets/styles/App.scss";
 import { RestaurantsProvider } from "./components/RestaurantsContext";
 import Navbar from "./components/layout/Navbar";
 import Restaurants from "./components/Restaurants";
 import Footer from "./components/layout/Footer";
+import styled from "styled-components";
+import GlobalStyles from "./components/styled-components/GlobalStyles";
 
 const App = () => {
     return (
         <RestaurantsProvider>
-            <div className="App">
-                <Navbar />
-                <main>
-                    <Restaurants />
-                </main>
-                <Footer />
-            </div>
+            <GlobalStyles />
+            <Navbar />
+            <Container>
+                <Restaurants />
+            </Container>
+            <Footer />
         </RestaurantsProvider>
     );
 };
+
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1100px;
+`;
 
 export default App;

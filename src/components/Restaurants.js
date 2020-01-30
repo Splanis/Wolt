@@ -1,10 +1,8 @@
 import React, { useContext, useState } from "react";
 import { RestaurantsContext } from "./RestaurantsContext";
-import Sort from "./Sort";
 import Restaurant from "./Restaurant";
-import "../assets/styles/Restaurants.scss";
-import gridIcon from "../assets/icons/grid.png";
-import listIcon from "../assets/icons/list.png";
+import Header from "./Header";
+import styled from "styled-components";
 
 const Restaurants = () => {
     // Getting the restaurants data from our Restaurants Context API
@@ -16,29 +14,32 @@ const Restaurants = () => {
     // Counting all restaurants that are online
     const restaurantsOnline = restaurants.filter(restaurant => restaurant.online == true).length;
 
-    return (
-        <div className="restaurants">
-            <div className="header">
-                <h2 className="open-restaurants">{restaurantsOnline} Restaurants open & online</h2>
-                <div className="buttons">
-                    <div className="sort">
-                        <Sort />
-                    </div>
-                    <div className="layout-btns">
-                        <button className="grid-btn" onClick={() => setGrid(true)}>
-                            <img src={gridIcon} alt="grid" />
-                        </button>
-                        <button className="list-btn" onClick={() => setGrid(false)}>
-                            <img className="list-img" src={listIcon} alt="list" />
-                        </button>
-                    </div>
-                </div>
-            </div>
+    const toGrid = () => {
+        if (!isGrid) {
+            setGrid(true);
+        }
+    };
 
-            <hr className="divider" />
+    const toList = () => {
+        if (isGrid) {
+            setGrid(false);
+        }
+    };
+
+    let gridProps = {};
+    if (isGrid) {
+        gridProps.isGrid = isGrid;
+    }
+
+    return (
+        <RestaurantsContain>
+            <Header restaurantsOnline={restaurantsOnline} toGrid={toGrid} toList={toList} />
+
+            <Divider />
 
             {/* If isGrid == True then active CSS class is layout-grid else active CSS class is layout-list */}
-            <div className={isGrid ? "layout-grid" : "layout-list"}>
+            {/* <RestaurantsMap className={isGrid ? "layout-grid" : "layout-list"}> */}
+            <RestaurantsMap {...gridProps}>
                 {/* Mapping all the Restaurants */}
                 {restaurants.map(restaurant => (
                     <Restaurant
@@ -53,9 +54,31 @@ const Restaurants = () => {
                         isGrid={isGrid}
                     />
                 ))}
-            </div>
-        </div>
+            </RestaurantsMap>
+        </RestaurantsContain>
     );
 };
+
+// Components' style
+const RestaurantsContain = styled.div`
+    display: flex;
+    flex-direction: ${props => (props.isGrid ? "row" : "column")};
+    justify-content: center;
+    padding-top: 70px;
+    margin: 10px;
+    width: 100%;
+`;
+
+const Divider = styled.hr`
+    margin: 0 11px 25px 11px;
+    color: rgba(0, 0, 0, 0.6);
+`;
+
+const RestaurantsMap = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+`;
 
 export default Restaurants;

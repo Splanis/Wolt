@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { RestaurantsContext } from "./RestaurantsContext";
-import "../assets/styles/Sort.scss";
+import styled from "styled-components";
+import Button from "./styled-components/Button";
 
 const Sort = () => {
     const [restaurants, sortRestaurants, unsortedRestaurants] = useContext(RestaurantsContext);
@@ -26,20 +27,26 @@ const Sort = () => {
     };
 
     return (
-        <div className="Sorting">
+        <SortButtons>
             <p>Sort by:</p>
             {/* This is not actually by rating, just the default sort from the json */}
-            <button value="rating" onClick={handleSort}>
+            <Button value="rating" onClick={handleSort}>
                 Rating
-            </button>
-            <button value="ascending" onClick={handleSort}>
+            </Button>
+            <Button value="ascending" onClick={handleSort}>
                 A-Z
-            </button>
-            <button value="descending" onClick={handleSort}>
+            </Button>
+            <Button value="descending" onClick={handleSort}>
                 Z-A
-            </button>
-        </div>
+            </Button>
+        </SortButtons>
     );
 };
+
+// Components' style
+const SortButtons = styled.div`
+    display: flex;
+    align-items: center;
+`;
 
 export default Sort;
