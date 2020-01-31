@@ -6,18 +6,19 @@ import styled from "styled-components";
 const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, isGrid }) => {
     const placeholder = <Blurhash hash={blurhash} width={350} height={350} resolutionX={32} resolutionY={32} punch={1} />;
 
+    // gridProps so Components will know if style is grid or list
     const gridProps = {};
     if (isGrid) {
         gridProps.isGrid = isGrid;
     }
 
+    // onlineProps so Components will know if restaurant is online or offline
     const onlineProps = {};
     if (online) {
         onlineProps.online = online;
     }
 
     return (
-        // gridProps are passed because in mobile viewport the layout is always grid
         <RestaurantCard {...gridProps}>
             <RestaurantImage {...gridProps}>
                 <ProgressiveImage src={image}>
@@ -134,7 +135,7 @@ const RestaurantInfo = styled.p`
 
 const RestaurantTags = styled.p`
     display: flex;
-    
+
     p {
         height: 24px;
         line-height: 24px;
