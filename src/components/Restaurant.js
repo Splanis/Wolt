@@ -16,8 +16,6 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
         onlineProps.online = online;
     }
 
-    console.log(onlineProps);
-
     return (
         // gridProps are passed because in mobile viewport the layout is always grid
         <RestaurantCard {...gridProps}>
@@ -31,7 +29,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                 </ProgressiveImage>
                 <Offline style={{ display: online ? "none" : "flex" }}>Offline</Offline>
             </RestaurantImage>
-            <RestaurantContent>
+            <RestaurantContent {...gridProps}>
                 <RestaurantTitle>{name}</RestaurantTitle>
                 <RestaurantDescription>{description}</RestaurantDescription>
                 <RestaurantInfo>
@@ -74,7 +72,7 @@ const RestaurantCard = styled.div`
 
 const RestaurantImage = styled.div`
     width: ${props => (props.isGrid ? "100%" : "250px;")};
-    height: ${props => (props.isGrid ? "70%" : "170px")};
+    height: ${props => (props.isGrid ? "280px" : "170px")};
     overflow: hidden;
     border-radius: 3px 3px 0 0;
     position: relative;
@@ -100,6 +98,13 @@ const RestaurantContent = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: ${props => (props.isGrid ? "0" : "20px")};
+    transform: ${props => (props.isGrid ? "none" : "scale(1.2)")};
+
+    @media (max-width: 600px) {
+        padding: 0;
+        transform: none;
+    }
 `;
 
 const RestaurantTitle = styled.h2`
@@ -108,14 +113,14 @@ const RestaurantTitle = styled.h2`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 5px;
+    margin: 0 5px;
 `;
 
 const RestaurantDescription = styled.p`
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-left: 5px;
     font-size: 1.2rem;
 `;
