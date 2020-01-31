@@ -30,8 +30,8 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                 <Offline style={{ display: online ? "none" : "flex" }}>Offline</Offline>
             </RestaurantImage>
             <RestaurantContent {...gridProps}>
-                <RestaurantTitle>{name}</RestaurantTitle>
-                <RestaurantDescription>{description}</RestaurantDescription>
+                <RestaurantTitle {...gridProps}>{name}</RestaurantTitle>
+                <RestaurantDescription {...gridProps}>{description}</RestaurantDescription>
                 <RestaurantInfo>
                     Delivery: {delivery_price / 100}€
                     <RestaurantTags>
@@ -98,7 +98,6 @@ const RestaurantContent = styled.div`
     flex-direction: column;
     text-align: center;
     padding: ${props => (props.isGrid ? "0" : "20px")};
-    transform: ${props => (props.isGrid ? "none" : "scale(1.2)")};
 
     @media (max-width: 600px) {
         padding: 0;
@@ -113,6 +112,7 @@ const RestaurantTitle = styled.h2`
     align-items: center;
     width: 100%;
     margin: 0 5px;
+    font-size: ${props => (props.isGrid ? "" : "1.8rem")};
 `;
 
 const RestaurantDescription = styled.p`
@@ -121,7 +121,7 @@ const RestaurantDescription = styled.p`
     justify-content: center;
     align-items: center;
     margin-left: 5px;
-    font-size: 1.2rem;
+    font-size: ${props => (props.isGrid ? "1.2rem" : "1.5rem")};
 `;
 
 const RestaurantInfo = styled.p`
@@ -191,6 +191,7 @@ const Offline = styled.p`
     bottom: 0;
     left: 0;
     right: 0;
+    letter-spacing: 5px;
 `;
 
 export default Restaurant;
