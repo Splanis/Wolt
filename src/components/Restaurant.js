@@ -97,20 +97,23 @@ const RestaurantContent = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
+    text-align: center;
 `;
 
 const RestaurantTitle = styled.h2`
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    text-align: center;
     margin: 5px;
 `;
 
 const RestaurantDescription = styled.p`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     margin-left: 5px;
     font-size: 1.2rem;
 `;
