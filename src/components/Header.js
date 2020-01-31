@@ -6,7 +6,7 @@ import LayoutToggle from "./LayoutToggle";
 const Header = ({ restaurantsOnline, toGrid, toList }) => {
     return (
         <HeaderContain>
-            <OpenRestaurants>{restaurantsOnline} Restaurants online</OpenRestaurants>
+            <OpenRestaurants>{restaurantsOnline} Restaurants open & online</OpenRestaurants>
             <Buttons>
                 <Sort />
                 <LayoutToggle toGrid={toGrid} toList={toList} />
@@ -32,6 +32,7 @@ const Buttons = styled.div`
 `;
 
 const OpenRestaurants = styled.h1`
+    text-align: center;
     font-size: 1.5rem;
 `;
 
