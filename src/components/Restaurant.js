@@ -12,7 +12,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
         gridProps.isGrid = isGrid;
     }
 
-     // onlineProps so Components will know if restaurant is online or οnline
+    // onlineProps so Components will know if restaurant is online or οnline
     const onlineProps = {};
     if (online) {
         onlineProps.online = online;
@@ -136,7 +136,7 @@ const RestaurantInfo = styled.p`
 
 const RestaurantTags = styled.p`
     display: flex;
-    
+
     p {
         height: 24px;
         line-height: 24px;
