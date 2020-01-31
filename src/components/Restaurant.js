@@ -25,7 +25,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                 <ProgressiveImage src={image}>
                     {(image, loading) => {
                         // ProgressiveImage Component loads placeholder (Blurhash Component) while loading the real image
-                        return loading ? placeholder : <img src={image} alt="" style={{ filter: online ? "none" : "grayscale(100%)"}} />;
+                        return loading ? placeholder : <img src={image} alt="" style={{ filter: online ? "none" : "grayscale(100%)" }} />;
                         // If the restaurant is not online, it gets className 'closed' which means it has black & white image
                     }}
                 </ProgressiveImage>
@@ -73,9 +73,12 @@ const RestaurantImage = styled.div`
     overflow: hidden;
     border-radius: 3px 3px 0 0;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
-        width: 120%;
+        width: 130%;
         height: 100%;
         border-radius: 3px 3px 0 0;
         transition: all 0.5s;
