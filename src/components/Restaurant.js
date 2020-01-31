@@ -12,7 +12,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
         gridProps.isGrid = isGrid;
     }
 
-    // onlineProps so Components will know if restaurant is online or offline
+     // onlineProps so Components will know if restaurant is online or οnline
     const onlineProps = {};
     if (online) {
         onlineProps.online = online;
@@ -81,7 +81,8 @@ const RestaurantImage = styled.div`
     align-items: center;
 
     img {
-        width: 130%;
+        object-fit: cover;
+        width: 100%;
         height: 100%;
         border-radius: 3px 3px 0 0;
         transition: all 0.5s;
@@ -135,7 +136,7 @@ const RestaurantInfo = styled.p`
 
 const RestaurantTags = styled.p`
     display: flex;
-
+    
     p {
         height: 24px;
         line-height: 24px;
