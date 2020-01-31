@@ -25,14 +25,14 @@ const HeaderContain = styled.div`
     }
 `;
 
-const OpenRestaurants = styled.h1`
-    font-size: 1.5rem;
-`;
-
 const Buttons = styled.div`
-    margin-top: 15px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
+`;
+
+const OpenRestaurants = styled.h1`
+    font-size: 1.5rem;
 `;
 
 export default Header;
