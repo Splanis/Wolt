@@ -63,7 +63,7 @@ const RestaurantCard = styled.div`
         transform: scale(1.05);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 750px) {
         flex-direction: column;
         width: 340px;
         height: 400px;
@@ -88,7 +88,7 @@ const RestaurantImage = styled.div`
         transition: all 0.5s;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 750px) {
         width: 100%;
         height: 70%;
     }
@@ -101,7 +101,7 @@ const RestaurantContent = styled.div`
     text-align: center;
     padding: ${props => (props.isGrid ? "0" : "20px")};
 
-    @media (max-width: 600px) {
+    @media (max-width: 750px) {
         padding: 0;
         transform: none;
     }
