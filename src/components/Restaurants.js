@@ -12,7 +12,7 @@ const Restaurants = () => {
     const [isGrid, setGrid] = useState(true);
 
     // Counting all restaurants that are online
-    const restaurantsOnline = restaurants.filter(restaurant => restaurant.online == true).length;
+    const restaurantsOnline = restaurants.filter(restaurant => restaurant.online === true).length;
 
     const toGrid = () => {
         if (!isGrid) {
