@@ -67,6 +67,8 @@ const RestaurantCard = styled.div`
 
     @media (max-width: 600px) {
         flex-direction: column;
+        width: 340px;
+        height: 400px;
     }
 `;
 
