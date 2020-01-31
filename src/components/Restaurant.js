@@ -34,9 +34,14 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
             <RestaurantContent>
                 <RestaurantTitle>{name}</RestaurantTitle>
                 <RestaurantDescription>{description}</RestaurantDescription>
-                <RestaurantTags>
-                    Delivery: {delivery_price / 100}€ - {tags.join(", ")}
-                </RestaurantTags>
+                <RestaurantInfo>
+                    Delivery: {delivery_price / 100}€
+                    <RestaurantTags>
+                        {tags.map(tag => (
+                            <p>{tag}</p>
+                        ))}
+                    </RestaurantTags>
+                </RestaurantInfo>
             </RestaurantContent>
         </RestaurantCard>
     );
@@ -62,8 +67,6 @@ const RestaurantCard = styled.div`
 
     @media (max-width: 600px) {
         flex-direction: column;
-        width: 340px;
-        height: 400px;
     }
 `;
 
@@ -94,32 +97,78 @@ const RestaurantContent = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 `;
 
 const RestaurantTitle = styled.h2`
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
 `;
 
 const RestaurantDescription = styled.p`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex: 1;
+    margin-left: 5px;
     font-size: 1.2rem;
 `;
 
-const RestaurantTags = styled.p`
+const RestaurantInfo = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
     color: rgb(130, 130, 130);
+`;
+
+const RestaurantTags = styled.p`
+    display: flex;
+
+    p {
+        height: 24px;
+        line-height: 24px;
+        position: relative;
+        margin: 0 5px 3px 15px;
+        padding: 0 10px 0 12px;
+        background: #333333;
+        -webkit-border-bottom-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        -webkit-border-top-right-radius: 3px;
+        border-top-right-radius: 3px;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 11px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -12px;
+            width: 0;
+            height: 0;
+            border-color: transparent #333333 transparent transparent;
+            border-style: solid;
+            border-width: 12px 12px 12px 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 1px;
+            float: left;
+            width: 5px;
+            height: 5px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background: #fff;
+            -webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+            box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+        }
+    }
 `;
 
 const Offline = styled.p`
