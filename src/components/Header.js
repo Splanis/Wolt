@@ -8,7 +8,7 @@ import Sort from "./Sort";
 const Header = ({ restaurantsOnline, toGrid, toList }) => {
     return (
         <HeaderContain>
-            <h2 className="open-restaurants">{restaurantsOnline} Restaurants open & online</h2>
+            <h2 className="open-restaurants">{restaurantsOnline} Restaurants online</h2>
             <div className="buttons">
                 <Sort />
                 <div className="layout-btns">
