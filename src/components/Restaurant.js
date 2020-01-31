@@ -16,12 +16,13 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
         onlineProps.online = online;
     }
 
-    console.log(onlineProps)
+    console.log(onlineProps);
 
     return (
+        // gridProps are passed because in mobile viewport the layout is always grid
         <RestaurantCard {...gridProps}>
             <RestaurantImage {...gridProps}>
-                <ProgressiveImage src={image} >
+                <ProgressiveImage src={image}>
                     {(image, loading) => {
                         // ProgressiveImage Component loads placeholder (Blurhash Component) while loading the real image
                         return loading ? placeholder : <img src={image} alt="" className={online ? null : "closed"} />;
@@ -29,14 +30,13 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                     }}
                 </ProgressiveImage>
                 <p className={online ? null : "offline"}>Offline</p>
-                <Offline></Offline>
             </RestaurantImage>
             <RestaurantContent>
-                <h2 className="restaurant-title">{name}</h2>
-                <p className="restaurant-description">{description}</p>
-                <p className="restaurant-tags">
+                <RestaurantTitle>{name}</RestaurantTitle>
+                <RestaurantDescription>{description}</RestaurantDescription>
+                <RestaurantTags>
                     Delivery: {delivery_price / 100}€ - {tags.join(", ")}
-                </p>
+                </RestaurantTags>
             </RestaurantContent>
         </RestaurantCard>
     );
@@ -65,7 +65,7 @@ const RestaurantCard = styled.div`
     }
 
     .offline {
-        font-size: 3rem;
+        font-size: 4rem;
         color: white;
         text-shadow: 0px 0px 6px #000000;
         z-index: 5;
@@ -118,37 +118,29 @@ const RestaurantContent = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    h2,
-    p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    h2 {
-        flex: 1;
-    }
-
-    & p:nth-child(2) {
-        font-size: 1.2rem;
-        flex: 1;
-    }
-    & p:nth-child(3) {
-        color: rgb(130, 130, 130);
-        flex: 1;
-    }
 `;
 
-const Offline = styled.div`
-    font-size: 3rem;
-    color: white;
-    text-shadow: 0px 0px 6px #000000;
-    z-index: 5;
-    position: absolute;
+const RestaurantTitle = styled.h2`
+    flex: 1;
+    display: flex;
     justify-content: center;
-    top: 35%;
-    width: 100%;
+    align-items: center;
+`;
+
+const RestaurantDescription = styled.p`
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex: 1;
+    font-size: 1.2rem;
+`;
+
+const RestaurantTags = styled.p`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: rgb(130, 130, 130);
 `;
 
 export default Restaurant;
