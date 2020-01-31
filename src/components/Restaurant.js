@@ -135,12 +135,12 @@ const RestaurantInfo = styled.p`
 
 const RestaurantTags = styled.p`
     display: flex;
-
+    
     p {
         height: 24px;
         line-height: 24px;
         position: relative;
-        margin: 0 5px 3px 15px;
+        margin: 0 0 3px 18px;
         padding: 0 10px 0 12px;
         background: #333333;
         -webkit-border-bottom-right-radius: 3px;
