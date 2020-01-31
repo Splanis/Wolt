@@ -37,7 +37,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                     Delivery: {delivery_price / 100}€
                     <RestaurantTags>
                         {tags.map(tag => (
-                            <p>{tag}</p>
+                            <Tag>{tag}</Tag>
                         ))}
                     </RestaurantTags>
                 </RestaurantInfo>
@@ -126,7 +126,7 @@ const RestaurantDescription = styled.p`
     font-size: ${props => (props.isGrid ? "1.2rem" : "1.5rem")};
 `;
 
-const RestaurantInfo = styled.p`
+const RestaurantInfo = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,51 +134,51 @@ const RestaurantInfo = styled.p`
     color: rgb(130, 130, 130);
 `;
 
-const RestaurantTags = styled.p`
+const RestaurantTags = styled.div`
     display: flex;
+`;
 
-    p {
-        height: 24px;
-        line-height: 24px;
-        position: relative;
-        margin: 0 0 3px 18px;
-        padding: 0 10px 0 12px;
-        background: #333333;
-        -webkit-border-bottom-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        -webkit-border-top-right-radius: 3px;
-        border-top-right-radius: 3px;
-        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        color: #fff;
-        font-size: 11px;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        font-weight: bold;
+const Tag = styled.p`
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    margin: 0 0 3px 18px;
+    padding: 0 10px 0 12px;
+    background: #333333;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 11px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -12px;
-            width: 0;
-            height: 0;
-            border-color: transparent #333333 transparent transparent;
-            border-style: solid;
-            border-width: 12px 12px 12px 0;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: 1px;
-            float: left;
-            width: 5px;
-            height: 5px;
-            -webkit-border-radius: 50%;
-            border-radius: 50%;
-            background: #fff;
-            -webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
-            box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
-        }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -12px;
+        width: 0;
+        height: 0;
+        border-color: transparent #333333 transparent transparent;
+        border-style: solid;
+        border-width: 12px 12px 12px 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 1px;
+        float: left;
+        width: 5px;
+        height: 5px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #fff;
+        -webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+        box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
     }
 `;
 
