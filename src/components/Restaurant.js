@@ -16,8 +16,6 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
         onlineProps.online = online;
     }
 
-    console.log(onlineProps);
-
     return (
         // gridProps are passed because in mobile viewport the layout is always grid
         <RestaurantCard {...gridProps}>
