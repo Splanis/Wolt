@@ -41,7 +41,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                     Delivery: {delivery_price / 100}€
                     <RestaurantTags>
                         {tags.map(tag => (
-                            <Tag>{tag}</Tag>
+                            <Tag key={tag}>{tag}</Tag>
                         ))}
                     </RestaurantTags>
                 </RestaurantInfo>
