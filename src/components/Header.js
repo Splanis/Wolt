@@ -3,13 +3,13 @@ import styled from "styled-components";
 import Sort from "./Sort";
 import LayoutToggle from "./LayoutToggle";
 
-const Header = ({ restaurantsOnline, toGrid, toList }) => {
+const Header = ({ restaurantsOnline, toGrid, toList, isGrid }) => {
     return (
         <HeaderContain>
             <OpenRestaurants>{restaurantsOnline} Restaurants open & online</OpenRestaurants>
             <Buttons>
                 <Sort />
-                <LayoutToggle toGrid={toGrid} toList={toList} />
+                <LayoutToggle toGrid={toGrid} toList={toList} isGrid={isGrid} />
             </Buttons>
         </HeaderContain>
     );

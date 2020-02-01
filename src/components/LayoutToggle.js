@@ -3,14 +3,15 @@ import styled from "styled-components";
 import gridIcon from "../assets/icons/grid.png";
 import listIcon from "../assets/icons/list.png";
 import Button from "./SharedStyles/Button";
+import { ActiveButton } from "./SharedStyles/Button";
 
-const LayoutToggle = ({ toGrid, toList }) => {
+const LayoutToggle = ({ toGrid, toList, isGrid }) => {
     return (
         <LayoutButtons>
-            <Button onClick={toGrid}>
+            <Button style={{ boxShadow: isGrid ? ActiveButton : null }} onClick={toGrid}>
                 <img src={gridIcon} alt="grid" />
             </Button>
-            <Button onClick={toList}>
+            <Button style={{ boxShadow: !isGrid ? ActiveButton : null }} onClick={toList}>
                 <img style={{ transform: "scale(1.15)" }} src={listIcon} alt="list" />
             </Button>
         </LayoutButtons>

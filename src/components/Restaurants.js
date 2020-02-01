@@ -34,7 +34,7 @@ const Restaurants = () => {
 
     return (
         <RestaurantsContain>
-            <Header restaurantsOnline={restaurantsOnline} toGrid={toGrid} toList={toList} />
+            <Header restaurantsOnline={restaurantsOnline} toGrid={toGrid} toList={toList} isGrid={isGrid} />
 
             <Divider />
 
