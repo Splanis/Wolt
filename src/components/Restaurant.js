@@ -4,7 +4,17 @@ import ProgressiveImage from "react-progressive-image";
 import styled from "styled-components";
 
 const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, isGrid }) => {
-    const placeholder = <Blurhash hash={blurhash} width={350} height={350} resolutionX={32} resolutionY={32} punch={1} />;
+    const placeholder = (
+        <Blurhash
+            hash={blurhash}
+            width={350}
+            height={350}
+            resolutionX={32}
+            resolutionY={32}
+            punch={1}
+            style={{ filter: online ? "none" : "grayscale(100%)" }}
+        />
+    );
 
     // gridProps so Components will know if style is grid or list
     const gridProps = {};
