@@ -3,7 +3,7 @@ import { Blurhash } from "react-blurhash";
 import ProgressiveImage from "react-progressive-image";
 import styled from "styled-components";
 
-const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, isGrid }) => {
+const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, gridProps }) => {
     const placeholder = (
         <Blurhash
             hash={blurhash}
@@ -15,12 +15,6 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
             style={{ filter: online ? "none" : "grayscale(100%)" }}
         />
     );
-
-    // gridProps so Components will know if style is grid or list
-    const gridProps = {};
-    if (isGrid) {
-        gridProps.isGrid = isGrid;
-    }
 
     // onlineProps so Components will know if restaurant is online or οnline
     const onlineProps = {};

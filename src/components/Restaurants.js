@@ -26,6 +26,7 @@ const Restaurants = () => {
         }
     };
 
+    // gridProps so Components will know if style is grid or list
     let gridProps = {};
     if (isGrid) {
         gridProps.isGrid = isGrid;
@@ -51,6 +52,7 @@ const Restaurants = () => {
                         blurhash={restaurant.blurhash}
                         online={restaurant.online}
                         isGrid={isGrid}
+                        gridProps={gridProps}
                     />
                 ))}
             </RestaurantsMap>
