@@ -12,7 +12,7 @@ const LayoutToggle = ({ toGrid, toList, isGrid }) => {
                 <img src={gridIcon} alt="grid" />
             </Button>
             <Button style={{ boxShadow: !isGrid ? ActiveButton : null }} onClick={toList}>
-                <img style={{ transform: "scale(1.15)" }} src={listIcon} alt="list" />
+                <img src={listIcon} alt="list" />
             </Button>
         </LayoutButtons>
     );
