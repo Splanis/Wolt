@@ -63,7 +63,6 @@ const RestaurantsContain = styled.div`
     display: flex;
     flex-direction: ${props => (props.isGrid ? "row" : "column")};
     justify-content: center;
-    padding-top: 70px;
     margin: 10px;
     width: 100%;
 `;
