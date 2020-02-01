@@ -7,7 +7,8 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Ruda', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 16px;
     }
 `;
 
