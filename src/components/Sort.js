@@ -1,42 +1,47 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { RestaurantsContext } from "./RestaurantsContext";
 import styled from "styled-components";
 import Button from "./SharedStyles/Button";
+import { ActiveButton } from "./SharedStyles/Button";
 
 const Sort = () => {
     const [restaurants, sortRestaurants, unsortedRestaurants] = useContext(RestaurantsContext);
 
+    const [sort, setSort] = useState("rating");
+
     const handleSort = e => {
         switch (e.target.value) {
-            case "rating":
-                sortRestaurants(unsortedRestaurants);
-                break;
             case "ascending":
                 sortRestaurants(restaurants =>
                     [...restaurants].sort((restaurants1, restaurants2) => (restaurants1.name < restaurants2.name ? -1 : 1))
                 );
+                setSort("ascending");
                 break;
             case "descending":
                 sortRestaurants(restaurants =>
                     [...restaurants].sort((restaurants1, restaurants2) => (restaurants1.name > restaurants2.name ? -1 : 1))
                 );
+                setSort("descending");
+                break;
+            default:
+                sortRestaurants(unsortedRestaurants);
+                setSort("rating");
                 break;
         }
-        // Used spread operator to take restaurants and sort them ascending and descending by name property
         // Added '? -1 : 1' to handle sorting at Google Chrome / Safari
     };
 
     return (
         <SortButtons>
-            <p>Sort by:</p>
+            <p>Sort by</p>
             {/* This is not actually by rating, just the default sort from the json */}
-            <Button value="rating" onClick={handleSort}>
+            <Button style={{ boxShadow: sort === "rating" ? ActiveButton : null }} value="rating" onClick={handleSort}>
                 Rating
             </Button>
-            <Button value="ascending" onClick={handleSort}>
+            <Button style={{ boxShadow: sort === "ascending" ? ActiveButton : null }} value="ascending" onClick={handleSort}>
                 A-Z
             </Button>
-            <Button value="descending" onClick={handleSort}>
+            <Button style={{ boxShadow: sort === "descending" ? ActiveButton : null }} value="descending" onClick={handleSort}>
                 Z-A
             </Button>
         </SortButtons>
