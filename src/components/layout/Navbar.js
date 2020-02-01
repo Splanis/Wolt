@@ -25,6 +25,7 @@ const NavBarContain = styled.nav`
     align-items: center;
     position: fixed;
     width: 100%;
+    box-shadow: 0px 2px 14px 2px rgba(0, 0, 0, 0.6);
     z-index: 10;
 `;
 

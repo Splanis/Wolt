@@ -25,7 +25,7 @@ const Container = styled.div`
     align-items: center;
     margin: auto;
     max-width: 1100px;
-    padding-top: 70px;
+    padding-top: 80px;
 `;
 
 export default App;
