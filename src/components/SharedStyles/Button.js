@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-    padding: 5px 3px;
+    padding: 6px;
     margin: 5px;
     background-color: transparent;
     display: flex;
@@ -20,6 +20,10 @@ const Button = styled.button`
 
     &:focus {
         outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border: none;
     }
 `;
 
