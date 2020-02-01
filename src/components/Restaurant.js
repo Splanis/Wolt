@@ -117,8 +117,8 @@ const RestaurantTitle = styled.h2`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0 5px;
-    font-size: ${props => (props.isGrid ? "" : "1.8rem")};
+    padding: 5px;
+    font-size: ${props => (props.isGrid ? "1.5rem" : "1.8rem")};
 `;
 
 const RestaurantDescription = styled.p`
@@ -126,7 +126,7 @@ const RestaurantDescription = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 5px;
+    padding: 5px;
     font-size: ${props => (props.isGrid ? "1.2rem" : "1.5rem")};
 `;
 
@@ -134,12 +134,15 @@ const RestaurantInfo = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     flex: 1;
+    padding: 5px 0;
     color: rgb(130, 130, 130);
 `;
 
 const RestaurantTags = styled.div`
     display: flex;
+    flex-wrap: wrap;
 `;
 
 const Tag = styled.p`
@@ -155,7 +158,7 @@ const Tag = styled.p`
     border-top-right-radius: 3px;
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: 11px;
+    font-size: 0.9rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     font-weight: bold;
 
