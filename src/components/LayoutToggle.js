@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import gridIcon from "../assets/icons/grid.png";
 import listIcon from "../assets/icons/list.png";
-import Button from "./styled-components/Button";
+import Button from "./SharedStyles/Button";
 
 const LayoutToggle = ({ toGrid, toList }) => {
     return (
