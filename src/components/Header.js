@@ -26,17 +26,17 @@ const HeaderContain = styled.div`
 `;
 
 const Buttons = styled.div`
-    margin-top: 5px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
 `;
 
 const OpenRestaurants = styled.h1`
-    text-align: center;
     font-size: 1.7rem;
 
     @media (max-width: 750px){
         font-size: 1.5rem;
+        text-align: center;
     }
 `;
 
