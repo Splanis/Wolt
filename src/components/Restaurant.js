@@ -3,7 +3,7 @@ import ProgressiveImage from "react-progressive-image";
 import { Blurhash } from "react-blurhash";
 import styled from "styled-components";
 
-const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, gridProps }) => {
+const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, layoutProps }) => {
     const placeholder = (
         <Blurhash
             hash={blurhash}
@@ -23,8 +23,8 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
     }
 
     return (
-        <RestaurantCard {...gridProps}>
-            <RestaurantImage {...gridProps}>
+        <RestaurantCard {...layoutProps}>
+            <RestaurantImage {...layoutProps}>
                 <ProgressiveImage src={image}>
                     {(image, loading) => {
                         // ProgressiveImage Component loads placeholder (Blurhash Component) while loading the real image
@@ -34,14 +34,14 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                 </ProgressiveImage>
                 <Offline style={{ display: online ? "none" : "flex" }}>Offline</Offline>
             </RestaurantImage>
-            <RestaurantContent {...gridProps}>
-                <RestaurantTitle {...gridProps}>{name}</RestaurantTitle>
-                <RestaurantDescription {...gridProps}>{description}</RestaurantDescription>
-                <RestaurantInfo {...gridProps}>
+            <RestaurantContent {...layoutProps}>
+                <RestaurantTitle {...layoutProps}>{name}</RestaurantTitle>
+                <RestaurantDescription {...layoutProps}>{description}</RestaurantDescription>
+                <RestaurantInfo {...layoutProps}>
                     Delivery: {delivery_price / 100}€
                     <RestaurantTags>
                         {tags.map(tag => (
-                            <Tag {...gridProps} key={tag}>
+                            <Tag {...layoutProps} key={tag}>
                                 {tag}
                             </Tag>
                         ))}

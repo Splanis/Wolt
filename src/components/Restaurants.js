@@ -26,10 +26,10 @@ const Restaurants = () => {
         }
     };
 
-    // gridProps so Components will know if style is grid or list
-    let gridProps = {};
+    // layoutProps so Components will know if style is grid or list
+    let layoutProps = {};
     if (isGrid) {
-        gridProps.isGrid = isGrid;
+        layoutProps.isGrid = isGrid;
     }
 
     return (
@@ -39,7 +39,7 @@ const Restaurants = () => {
             <Divider />
 
             {/* <RestaurantsMap className={isGrid ? "layout-grid" : "layout-list"}> */}
-            <RestaurantsMap {...gridProps}>
+            <RestaurantsMap {...layoutProps}>
                 {/* Mapping all the Restaurants */}
                 {restaurants.map(restaurant => (
                     <Restaurant
@@ -52,7 +52,7 @@ const Restaurants = () => {
                         blurhash={restaurant.blurhash}
                         online={restaurant.online}
                         isGrid={isGrid}
-                        gridProps={gridProps}
+                        layoutProps={layoutProps}
                     />
                 ))}
             </RestaurantsMap>
