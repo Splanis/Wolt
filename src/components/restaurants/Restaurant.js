@@ -52,6 +52,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
     );
 };
 
+// Components' style
 const RestaurantCard = styled.div`
     display: flex;
     flex-direction: ${props => (props.isGrid ? "column" : "row")};
@@ -117,7 +118,7 @@ const RestaurantTitle = styled.h2`
     align-items: center;
     margin: auto 5px;
     font-size: ${props => (props.isGrid ? "1.4rem" : "2rem")};
-   
+
     @media (max-width: 750px) {
         font-size: 1.4rem;
     }
@@ -129,7 +130,7 @@ const RestaurantDescription = styled.p`
     align-items: center;
     margin: auto 5px;
     font-size: ${props => (props.isGrid ? "1.1rem" : "1.5rem")};
-     
+
     @media (max-width: 750px) {
         font-size: 1.1rem;
     }
@@ -143,7 +144,7 @@ const RestaurantInfo = styled.div`
     margin: auto;
     color: rgb(130, 130, 130);
     font-size: ${props => (props.isGrid ? "0.95rem" : "1.2rem")};
-     
+
     @media (max-width: 750px) {
         font-size: 0.95rem;
     }
@@ -198,7 +199,6 @@ const Tag = styled.p`
         box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
     }
 
-     
     @media (max-width: 750px) {
         font-size: 0.8rem;
     }
