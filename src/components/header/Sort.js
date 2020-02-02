@@ -1,11 +1,15 @@
 import React, { useContext, useState } from "react";
-import { RestaurantsContext } from "./RestaurantsContext";
-import Button from "./sharedStyles/Button";
-import { ActiveButton } from "./sharedStyles/Button";
+import { RestaurantsContext } from "../contexts/RestaurantsContext";
+import Button from "../sharedStyles/Button";
+import { ActiveButton } from "../sharedStyles/Button";
 import styled from "styled-components";
 
 const Sort = () => {
-    const [restaurants, sortRestaurants, unsortedRestaurants] = useContext(RestaurantsContext);
+    // Getting the restaurants and sortRestaurants function data from our Restaurants Context API
+    const [restaurants, sortRestaurants] = useContext(RestaurantsContext);
+
+    // Storing the restaurants unsorted
+    const [unsortedRestaurants] = useState(restaurants);
 
     const [sort, setSort] = useState("rating");
 
@@ -24,7 +28,7 @@ const Sort = () => {
                 setSort("descending");
                 break;
             default:
-                sortRestaurants(unsortedRestaurants);
+                sortRestaurants([...unsortedRestaurants]);
                 setSort("rating");
                 break;
         }
