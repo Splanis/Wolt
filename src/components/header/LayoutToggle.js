@@ -1,11 +1,27 @@
-import React from "react";
-import Button from "./sharedStyles/Button";
-import { ActiveButton } from "./sharedStyles/Button";
+import React, { useState, useContext } from "react";
+import { LayoutContext } from "../contexts/LayoutContext";
+import Button from "../sharedStyles/Button";
+import { ActiveButton } from "../sharedStyles/Button";
 import styled from "styled-components";
-import gridIcon from "../assets/icons/grid.png";
-import listIcon from "../assets/icons/list.png";
+import gridIcon from "../../assets/icons/grid.png";
+import listIcon from "../../assets/icons/list.png";
 
-const LayoutToggle = ({ toGrid, toList, isGrid }) => {
+const LayoutToggle = () => {
+    const [isGrid, setGrid] = useContext(LayoutContext);
+
+    // Getting the layout Style
+    const toGrid = () => {
+        if (!isGrid) {
+            setGrid(true);
+        }
+    };
+
+    const toList = () => {
+        if (isGrid) {
+            setGrid(false);
+        }
+    };
+
     return (
         <LayoutButtons>
             <Button style={{ boxShadow: isGrid ? ActiveButton : null }} onClick={toGrid}>
