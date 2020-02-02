@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Navbar = () => {
     return (
         <NavBarContain>
-            <WoltLogo></WoltLogo>
+            <WoltLogo />
         </NavBarContain>
     );
 };
