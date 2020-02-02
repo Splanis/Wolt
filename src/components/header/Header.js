@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { RestaurantsContext } from "../contexts/RestaurantsContext";
 import Sort from "./Sort";
 import LayoutToggle from "./LayoutToggle";
@@ -12,17 +12,18 @@ const Header = ({ toGrid, toList, isGrid }) => {
     const restaurantsOnline = restaurants.filter(restaurant => restaurant.online === true).length;
 
     return (
-        <HeaderContain>
+        <HeaderContainer>
             <OpenRestaurants>{restaurantsOnline} Restaurants open & online</OpenRestaurants>
             <Buttons>
                 <Sort />
                 <LayoutToggle toGrid={toGrid} toList={toList} isGrid={isGrid} />
             </Buttons>
-        </HeaderContain>
+        </HeaderContainer>
     );
 };
 
-const HeaderContain = styled.div`
+// Components' style
+const HeaderContainer = styled.div`
     width: 100%;
 
     @media (max-width: 750px) {
@@ -40,10 +41,10 @@ const Buttons = styled.div`
 
 const OpenRestaurants = styled.h1`
     font-size: 1.7rem;
+    text-align: center;
 
-    @media (max-width: 750px){
+    @media (max-width: 750px) {
         font-size: 1.5rem;
-        text-align: center;
     }
 `;
 

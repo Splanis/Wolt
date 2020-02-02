@@ -1,14 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { RestaurantsContext } from "../contexts/RestaurantsContext";
 import { LayoutContext } from "../contexts/LayoutContext";
-import Header from "../header/Header";
 import Restaurant from "./Restaurant";
 import styled from "styled-components";
 
 const Restaurants = () => {
     // Getting the restaurants data from our Restaurants Context API
     const [restaurants] = useContext(RestaurantsContext);
-    
+
     // Getting the layout Style
     const [isGrid] = useContext(LayoutContext);
 
@@ -19,7 +18,7 @@ const Restaurants = () => {
     }
 
     return (
-        <RestaurantsContain>
+        <RestaurantsContainer>
             <RestaurantsMap {...layoutProps}>
                 {/* Mapping all the Restaurants */}
                 {restaurants.map(restaurant => (
@@ -37,12 +36,12 @@ const Restaurants = () => {
                     />
                 ))}
             </RestaurantsMap>
-        </RestaurantsContain>
+        </RestaurantsContainer>
     );
 };
 
 // Components' style
-const RestaurantsContain = styled.div`
+const RestaurantsContainer = styled.div`
     display: flex;
     flex-direction: ${props => (props.isGrid ? "row" : "column")};
     justify-content: center;
