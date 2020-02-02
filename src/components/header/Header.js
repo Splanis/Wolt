@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { RestaurantsContext } from "../contexts/RestaurantsContext";
 import Sort from "./Sort";
 import LayoutToggle from "./LayoutToggle";
 import styled from "styled-components";
 
-const Header = ({ restaurantsOnline, toGrid, toList, isGrid }) => {
+const Header = ({ toGrid, toList, isGrid }) => {
+    // Getting the restaurants data from our Restaurants Context API
+    const [restaurants] = useContext(RestaurantsContext);
+
+    // Get how much restaurants are online
+    const restaurantsOnline = restaurants.filter(restaurant => restaurant.online === true).length;
+
     return (
         <HeaderContain>
             <OpenRestaurants>{restaurantsOnline} Restaurants open & online</OpenRestaurants>
@@ -16,8 +23,7 @@ const Header = ({ restaurantsOnline, toGrid, toList, isGrid }) => {
 };
 
 const HeaderContain = styled.div`
-    margin: 10px;
-    padding-top: 10px;
+    width: 100%;
 
     @media (max-width: 750px) {
         display: flex;

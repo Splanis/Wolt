@@ -1,30 +1,16 @@
 import React, { useContext, useState } from "react";
-import { RestaurantsContext } from "./RestaurantsContext";
-import Header from "./Header";
+import { RestaurantsContext } from "../contexts/RestaurantsContext";
+import { LayoutContext } from "../contexts/LayoutContext";
+import Header from "../header/Header";
 import Restaurant from "./Restaurant";
 import styled from "styled-components";
 
 const Restaurants = () => {
     // Getting the restaurants data from our Restaurants Context API
     const [restaurants] = useContext(RestaurantsContext);
-
-    // State for the Layout Style, if isGrid == True then layout is Grid else the layout is List
-    const [isGrid, setGrid] = useState(true);
-
-    // Counting all restaurants that are online
-    const restaurantsOnline = restaurants.filter(restaurant => restaurant.online === true).length;
-
-    const toGrid = () => {
-        if (!isGrid) {
-            setGrid(true);
-        }
-    };
-
-    const toList = () => {
-        if (isGrid) {
-            setGrid(false);
-        }
-    };
+    
+    // Getting the layout Style
+    const [isGrid] = useContext(LayoutContext);
 
     // layoutProps so Components will know if style is grid or list
     let layoutProps = {};
@@ -34,11 +20,6 @@ const Restaurants = () => {
 
     return (
         <RestaurantsContain>
-            <Header restaurantsOnline={restaurantsOnline} toGrid={toGrid} toList={toList} isGrid={isGrid} />
-
-            <Divider />
-
-            {/* <RestaurantsMap className={isGrid ? "layout-grid" : "layout-list"}> */}
             <RestaurantsMap {...layoutProps}>
                 {/* Mapping all the Restaurants */}
                 {restaurants.map(restaurant => (
@@ -65,13 +46,7 @@ const RestaurantsContain = styled.div`
     display: flex;
     flex-direction: ${props => (props.isGrid ? "row" : "column")};
     justify-content: center;
-    margin: 10px;
     width: 100%;
-`;
-
-const Divider = styled.hr`
-    margin: 0 11px 25px 11px;
-    color: rgba(0, 0, 0, 0.6);
 `;
 
 const RestaurantsMap = styled.div`
