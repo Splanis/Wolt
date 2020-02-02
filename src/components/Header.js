@@ -17,6 +17,7 @@ const Header = ({ restaurantsOnline, toGrid, toList, isGrid }) => {
 
 const HeaderContain = styled.div`
     margin: 10px;
+    padding-top: 10px;
 
     @media (max-width: 750px) {
         display: flex;

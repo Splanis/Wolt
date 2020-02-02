@@ -16,8 +16,7 @@ const NavBarContain = styled.nav`
     height: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: fixed;
+    align-items: center; 
     width: 100%;
     box-shadow: 0px 2px 14px 2px rgba(0, 0, 0, 0.6);
     z-index: 10;
