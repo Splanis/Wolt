@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { LayoutContext } from "../contexts/LayoutContext";
 import Button from "../sharedStyles/Button";
 import { ActiveButton } from "../sharedStyles/Button";
@@ -9,31 +9,19 @@ import listIcon from "../../assets/icons/list.png";
 const LayoutToggle = () => {
     const [isGrid, setGrid] = useContext(LayoutContext);
 
-    // Getting the layout Style
-    const toGrid = () => {
-        if (!isGrid) {
-            setGrid(true);
-        }
-    };
-
-    const toList = () => {
-        if (isGrid) {
-            setGrid(false);
-        }
-    };
-
     return (
         <LayoutButtons>
-            <Button style={{ boxShadow: isGrid ? ActiveButton : null }} onClick={toGrid}>
+            <Button style={{ boxShadow: isGrid ? ActiveButton : null }} onClick={() => setGrid(true)}>
                 <img src={gridIcon} alt="grid" />
             </Button>
-            <Button style={{ boxShadow: !isGrid ? ActiveButton : null }} onClick={toList}>
+            <Button style={{ boxShadow: !isGrid ? ActiveButton : null }} onClick={() => setGrid(false)}>
                 <img src={listIcon} alt="list" />
             </Button>
         </LayoutButtons>
     );
 };
 
+// Components' style
 const LayoutButtons = styled.div`
     display: flex;
 
