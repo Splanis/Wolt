@@ -73,12 +73,12 @@ const RestaurantCard = styled.div`
         flex-direction: column;
         width: 340px;
         height: 400px;
-        margin: 10px 20px;
+        /* margin: 10px 20px; */
     }
 `;
 
 const RestaurantImage = styled.div`
-    width: ${props => (props.isGrid ? "100%" : "250px;")};
+    width: ${props => (props.isGrid ? "100%" : "250px")};
     min-height: ${props => (props.isGrid ? "260px" : "170px")};
     overflow: hidden;
     border-radius: 3px 3px 0 0;
@@ -96,7 +96,7 @@ const RestaurantImage = styled.div`
 
     @media (max-width: 750px) {
         width: 100%;
-        height: 70%;
+        min-height: 260px;
     }
 `;
 
@@ -109,7 +109,6 @@ const RestaurantContent = styled.div`
 
     @media (max-width: 750px) {
         padding: 0;
-        transform: none;
     }
 `;
 
@@ -118,7 +117,11 @@ const RestaurantTitle = styled.h2`
     justify-content: center;
     align-items: center;
     margin: auto 5px;
-    font-size: ${props => (props.isGrid ? "1.6rem" : "2rem")};
+    font-size: ${props => (props.isGrid ? "1.4rem" : "2rem")};
+   
+    @media (max-width: 750px) {
+        font-size: 1.4rem;
+    }
 `;
 
 const RestaurantDescription = styled.p`
@@ -126,7 +129,11 @@ const RestaurantDescription = styled.p`
     justify-content: center;
     align-items: center;
     margin: auto 5px;
-    font-size: ${props => (props.isGrid ? "1.3rem" : "1.5rem")};
+    font-size: ${props => (props.isGrid ? "1.1rem" : "1.5rem")};
+     
+    @media (max-width: 750px) {
+        font-size: 1.1rem;
+    }
 `;
 
 const RestaurantInfo = styled.div`
@@ -137,6 +144,10 @@ const RestaurantInfo = styled.div`
     margin: auto;
     color: rgb(130, 130, 130);
     font-size: ${props => (props.isGrid ? "0.95rem" : "1.2rem")};
+     
+    @media (max-width: 750px) {
+        font-size: 0.95rem;
+    }
 `;
 
 const RestaurantTags = styled.div`
@@ -186,6 +197,11 @@ const Tag = styled.p`
         background: #fff;
         -webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
         box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+     
+    @media (max-width: 750px) {
+        font-size: 0.8rem;
     }
 `;
 
