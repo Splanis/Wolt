@@ -24,7 +24,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin: auto;
-    max-width: 1100px;
+    max-width: 1110px;
     padding-top: 80px;
 `;
 
