@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { RestaurantsContext } from "../contexts/RestaurantsContext";
-import { LayoutContext } from "../contexts/LayoutContext";
+import { RestaurantsContext } from "../context/RestaurantsContext";
+import { LayoutContext } from "../context/LayoutContext";
 import Restaurant from "./Restaurant";
 import styled from "styled-components";
 

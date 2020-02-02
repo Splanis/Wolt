@@ -1,6 +1,6 @@
 import React from "react";
-import { RestaurantsProvider } from "./components/contexts/RestaurantsContext";
-import { LayoutProvider } from "./components/contexts/LayoutContext";
+import { RestaurantsProvider } from "./components/context/RestaurantsContext";
+import { LayoutProvider } from "./components/context/LayoutContext";
 import Navbar from "./components/layout/Navbar";
 import Restaurants from "./components/restaurants/Restaurants";
 import Footer from "./components/layout/Footer";

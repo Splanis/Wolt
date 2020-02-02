@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { RestaurantsContext } from "../contexts/RestaurantsContext";
+import { RestaurantsContext } from "../context/RestaurantsContext";
 import Sort from "./Sort";
 import LayoutToggle from "./LayoutToggle";
 import styled from "styled-components";

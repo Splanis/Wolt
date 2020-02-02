@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { RestaurantsContext } from "../contexts/RestaurantsContext";
+import { RestaurantsContext } from "../context/RestaurantsContext";
 import Button from "../sharedStyles/Button";
 import { ActiveButton } from "../sharedStyles/Button";
 import styled from "styled-components";
