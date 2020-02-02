@@ -4,7 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import Restaurants from "./components/Restaurants";
 import Footer from "./components/layout/Footer";
 import styled from "styled-components";
-import GlobalStyles from "./components/SharedStyles/GlobalStyles";
+import GlobalStyles from "./components/sharedStyles/GlobalStyles";
 
 const App = () => {
     return (

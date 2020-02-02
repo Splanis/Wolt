@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { RestaurantsContext } from "./RestaurantsContext";
 import styled from "styled-components";
-import Button from "./SharedStyles/Button";
-import { ActiveButton } from "./SharedStyles/Button";
+import Button from "./sharedStyles/Button";
+import { ActiveButton } from "./sharedStyles/Button";
 
 const Sort = () => {
     const [restaurants, sortRestaurants, unsortedRestaurants] = useContext(RestaurantsContext);
