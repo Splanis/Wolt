@@ -37,11 +37,13 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
             <RestaurantContent {...gridProps}>
                 <RestaurantTitle {...gridProps}>{name}</RestaurantTitle>
                 <RestaurantDescription {...gridProps}>{description}</RestaurantDescription>
-                <RestaurantInfo>
+                <RestaurantInfo {...gridProps}>
                     Delivery: {delivery_price / 100}€
                     <RestaurantTags>
                         {tags.map(tag => (
-                            <Tag key={tag}>{tag}</Tag>
+                            <Tag {...gridProps} key={tag}>
+                                {tag}
+                            </Tag>
                         ))}
                     </RestaurantTags>
                 </RestaurantInfo>
@@ -71,18 +73,18 @@ const RestaurantCard = styled.div`
         flex-direction: column;
         width: 340px;
         height: 400px;
+        margin: 10px 20px;
     }
 `;
 
 const RestaurantImage = styled.div`
     width: ${props => (props.isGrid ? "100%" : "250px;")};
-    height: ${props => (props.isGrid ? "280px" : "170px")};
+    min-height: ${props => (props.isGrid ? "260px" : "170px")};
     overflow: hidden;
     border-radius: 3px 3px 0 0;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 3px;
 
     img {
         object-fit: cover;
@@ -112,22 +114,19 @@ const RestaurantContent = styled.div`
 `;
 
 const RestaurantTitle = styled.h2`
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 5px;
-    font-size: ${props => (props.isGrid ? "1.5rem" : "1.8rem")};
+    margin: auto 5px;
+    font-size: ${props => (props.isGrid ? "1.6rem" : "2rem")};
 `;
 
 const RestaurantDescription = styled.p`
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
-    font-size: ${props => (props.isGrid ? "1.2rem" : "1.5rem")};
+    margin: auto 5px;
+    font-size: ${props => (props.isGrid ? "1.3rem" : "1.5rem")};
 `;
 
 const RestaurantInfo = styled.div`
@@ -135,22 +134,23 @@ const RestaurantInfo = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex: 1;
-    padding: 5px 0;
+    margin: auto;
     color: rgb(130, 130, 130);
+    font-size: ${props => (props.isGrid ? "0.95rem" : "1.2rem")};
 `;
 
 const RestaurantTags = styled.div`
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 `;
 
 const Tag = styled.p`
     height: 24px;
     line-height: 24px;
     position: relative;
-    margin: 0 0 3px 18px;
-    padding: 0 10px 0 12px;
+    margin: 0 0 5px 18px;
+    padding: 0 5px 0 10px;
     background: #333333;
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -158,7 +158,7 @@ const Tag = styled.p`
     border-top-right-radius: 3px;
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: 0.9rem;
+    font-size: ${props => (props.isGrid ? "0.8rem" : "1.1rem")};
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     font-weight: bold;
 
@@ -190,17 +190,15 @@ const Tag = styled.p`
 `;
 
 const Offline = styled.p`
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 4rem;
     color: white;
     text-shadow: 0px 0px 6px #000000;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    letter-spacing: 5px;
+    width: 100%;
+    height: 100%;
 `;
 
 export default Restaurant;
