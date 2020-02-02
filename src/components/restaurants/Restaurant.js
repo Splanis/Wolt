@@ -7,8 +7,8 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
     const placeholder = (
         <Blurhash
             hash={blurhash}
-            width={350}
-            height={350}
+            width={340}
+            height={260}
             resolutionX={32}
             resolutionY={32}
             punch={1}
@@ -16,7 +16,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
         />
     );
 
-    // onlineProps so Components will know if restaurant is online or οnline
+    // onlineProps, so Components will know if restaurant is online or οnline
     const onlineProps = {};
     if (online) {
         onlineProps.online = online;
@@ -73,7 +73,6 @@ const RestaurantCard = styled.div`
         flex-direction: column;
         width: 340px;
         height: 400px;
-        /* margin: 10px 20px; */
     }
 `;
 
