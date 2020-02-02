@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import Sort from "./Sort";
 import LayoutToggle from "./LayoutToggle";
+import styled from "styled-components";
 
 const Header = ({ restaurantsOnline, toGrid, toList, isGrid }) => {
     return (

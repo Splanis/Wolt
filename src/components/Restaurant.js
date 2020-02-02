@@ -1,6 +1,6 @@
 import React from "react";
-import { Blurhash } from "react-blurhash";
 import ProgressiveImage from "react-progressive-image";
+import { Blurhash } from "react-blurhash";
 import styled from "styled-components";
 
 const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, gridProps }) => {

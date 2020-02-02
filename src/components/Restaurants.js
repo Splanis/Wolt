@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { RestaurantsContext } from "./RestaurantsContext";
-import Restaurant from "./Restaurant";
 import Header from "./Header";
+import Restaurant from "./Restaurant";
 import styled from "styled-components";
 
 const Restaurants = () => {
