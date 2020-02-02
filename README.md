@@ -10,7 +10,7 @@ Component. 'Restaurants' Component gets its data from a Context API Component, '
 to handle State globally in big projects in real-word. Inside 'Restaurants' Component there are two Components. The first Component is the
 'Header' which contains the buttons to change the layout style between grid and list and 'Sort' Component which handles the alphabetically
 sort of Restaurants in ascending and descending. The second Component is 'Restaurant' which displays each Restaurant data like image, name,
-description, delivery price and tags.
+description, delivery price and tags. Through the whole development I used git to version control my code.
 
 # Requirements
 
