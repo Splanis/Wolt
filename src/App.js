@@ -3,8 +3,8 @@ import { RestaurantsProvider } from "./components/RestaurantsContext";
 import Navbar from "./components/layout/Navbar";
 import Restaurants from "./components/Restaurants";
 import Footer from "./components/layout/Footer";
-import styled from "styled-components";
 import GlobalStyles from "./components/sharedStyles/GlobalStyles";
+import styled from "styled-components";
 
 const App = () => {
     return (
