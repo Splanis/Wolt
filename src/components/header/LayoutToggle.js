@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LayoutContext } from "../contexts/LayoutContext";
+import { LayoutContext } from "../context/LayoutContext";
 import Button from "../sharedStyles/Button";
 import { ActiveButton } from "../sharedStyles/Button";
 import styled from "styled-components";
