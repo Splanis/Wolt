@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProgressiveImage from "react-progressive-image";
 import { Blurhash } from "react-blurhash";
+import { LayoutContext } from "../context/LayoutContext";
 import styled from "styled-components";
 
-const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online, layoutProps }) => {
+const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, online }) => {
     const placeholder = (
         <Blurhash
             hash={blurhash}
@@ -15,6 +16,15 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
             style={{ filter: online ? "none" : "grayscale(100%)" }}
         />
     );
+
+    // Getting the layout Style
+    const [isGrid] = useContext(LayoutContext);
+
+    // layoutProps so Components will know if style is grid or list
+    let layoutProps = {};
+    if (isGrid) {
+        layoutProps.isGrid = isGrid;
+    }
 
     // onlineProps, so Components will know if restaurant is online or οnline
     const onlineProps = {};
@@ -123,13 +133,13 @@ const RestaurantDetails = styled.div`
 
     h2 {
         font-size: ${props => (props.isGrid ? "1.4rem" : "1.7rem")};
-        margin:  ${props => (props.isGrid ? "auto" : "5px")};
+        margin: ${props => (props.isGrid ? "auto" : "5px")};
         padding-top: ${props => (props.isGrid ? "3px" : "0")};
     }
 
     p {
         font-size: ${props => (props.isGrid ? "1.1rem" : "1.3rem")};
-        margin:  ${props => (props.isGrid ? "auto" : "5px")};
+        margin: ${props => (props.isGrid ? "auto" : "5px")};
         padding-bottom: ${props => (props.isGrid ? "3px" : "0")};
     }
 
@@ -144,7 +154,8 @@ const RestaurantDetails = styled.div`
             padding-bottom: 3px;
         }
 
-        h2, p {
+        h2,
+        p {
             margin: auto;
         }
     }
