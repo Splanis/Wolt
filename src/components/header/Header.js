@@ -25,7 +25,7 @@ const Header = ({ toGrid, toList, isGrid }) => {
 // Components' style
 const HeaderContainer = styled.div`
     width: 100%;
-    padding: 25px 5px 0 5px;
+    margin-top: 25px;
 
     @media (max-width: 735px) {
         display: flex;
