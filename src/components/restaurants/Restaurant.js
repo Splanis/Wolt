@@ -62,7 +62,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
 const RestaurantCard = styled.div`
     display: flex;
     flex-direction: ${props => (props.isGrid ? "column" : "row")};
-    width: ${props => (props.isGrid ? "340px" : "1100px")};
+    width: ${props => (props.isGrid ? "340px" : "1060px")};
     height: ${props => (props.isGrid ? "380px" : "120px")};
     border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
