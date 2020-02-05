@@ -35,6 +35,7 @@ const HeaderContainer = styled.div`
 const OpenRestaurants = styled.h1`
     font-size: 1.7rem;
     padding: 20px 0 20px 0;
+    text-align: center;
 
     @media (max-width: 735px) {
         font-size: 1.5rem;
