@@ -25,8 +25,9 @@ const Header = ({ toGrid, toList, isGrid }) => {
 // Components' style
 const HeaderContainer = styled.div`
     width: 100%;
+    padding: 25px 5px 0 5px;
 
-    @media (max-width: 750px) {
+    @media (max-width: 735px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -43,7 +44,7 @@ const OpenRestaurants = styled.h1`
     font-size: 1.7rem;
     text-align: center;
 
-    @media (max-width: 750px) {
+    @media (max-width: 735px) {
         font-size: 1.5rem;
     }
 `;

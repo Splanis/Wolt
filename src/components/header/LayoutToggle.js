@@ -33,7 +33,7 @@ const LayoutButtons = styled.div`
         outline: none;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 735px) {
         display: none;
     }
 `;

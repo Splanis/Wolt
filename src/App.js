@@ -34,13 +34,11 @@ const Container = styled.div`
     flex-direction: column;
     margin: auto;
     max-width: 1110px;
-    padding: 25px 15px 0 15px;
 `;
 
 const Divider = styled.hr`
-    margin: 0 20px 20px 20px;
     color: rgba(0, 0, 0, 0.6);
-    width: 100%;
+    width: 99%;
 `;
 
 export default App;
