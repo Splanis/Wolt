@@ -90,13 +90,12 @@ const RestaurantImage = styled.div`
     overflow: hidden;
     border-radius: ${props => (props.isGrid ? "3px 3px 0 0" : "3px 0 0 3px")};
     position: relative;
-    display: flex;
 
     img {
         object-fit: cover;
         width: 100%;
         height: 100%;
-        border-radius: 3px 3px 0 0;
+        border-radius: ${props => (props.isGrid ? "3px 3px 0 0" : "3px 0 0 3px")};
         transition: all 0.5s;
     }
 
