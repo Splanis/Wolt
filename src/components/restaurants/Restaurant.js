@@ -97,16 +97,16 @@ const RestaurantImage = styled.div`
         height: 100%;
         border-radius: ${props => (props.isGrid ? "3px 3px 0 0" : "3px 0 0 3px")};
         transition: all 0.5s;
-
-        @media (max-width: 735px) {
-            border-radius: 3px 3px 0 0;
-        }
     }
 
     @media (max-width: 735px) {
         width: 100%;
         min-height: 260px;
         border-radius: 3px 3px 0 0;
+
+        img {
+            border-radius: 3px 3px 0 0;
+        }
     }
 `;
 
