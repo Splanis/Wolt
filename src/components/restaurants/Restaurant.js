@@ -26,12 +26,6 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
         layoutProps.isGrid = isGrid;
     }
 
-    // onlineProps, so Components will know if restaurant is online or οnline
-    const onlineProps = {};
-    if (online) {
-        onlineProps.online = online;
-    }
-
     return (
         <RestaurantCard {...layoutProps}>
             <RestaurantImage {...layoutProps}>
@@ -86,13 +80,13 @@ const RestaurantCard = styled.div`
         flex-direction: column;
         min-width: 340px;
         max-width: 340px;
-        height: 400px;
+        height: 380px;
     }
 `;
 
 const RestaurantImage = styled.div`
     width: ${props => (props.isGrid ? "100%" : "200px")};
-    min-height: ${props => (props.isGrid ? "270px" : "120px")};
+    min-height: ${props => (props.isGrid ? "260px" : "120px")};
     overflow: hidden;
     border-radius: ${props => (props.isGrid ? "3px 3px 0 0" : "3px 0 0 3px")};
     position: relative;
@@ -108,7 +102,7 @@ const RestaurantImage = styled.div`
 
     @media (max-width: 735px) {
         width: 100%;
-        min-height: 280px;
+        min-height: 260px;
         border-radius: 3px 3px 0 0;
     }
 `;
