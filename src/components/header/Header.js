@@ -18,6 +18,7 @@ const Header = ({ toGrid, toList, isGrid }) => {
                 <Sort />
                 <LayoutToggle toGrid={toGrid} toList={toList} isGrid={isGrid} />
             </Buttons>
+            <Divider />
         </HeaderContainer>
     );
 };
@@ -25,28 +26,35 @@ const Header = ({ toGrid, toList, isGrid }) => {
 // Components' style
 const HeaderContainer = styled.div`
     width: 100%;
-    margin-top: 25px;
-
-    @media (max-width: 735px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-`;
-
-const Buttons = styled.div`
-    margin-top: 15px;
+    padding: 0 25px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 `;
 
 const OpenRestaurants = styled.h1`
     font-size: 1.7rem;
     text-align: center;
+    padding: 20px 0 20px 0;
 
     @media (max-width: 735px) {
         font-size: 1.5rem;
     }
+`;
+
+const Buttons = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 735px) {
+        justify-content: center;
+    }
+`;
+
+const Divider = styled.hr`
+    color: rgba(0, 0, 0, 0.6);
+    width: 100%;
 `;
 
 export default Header;
