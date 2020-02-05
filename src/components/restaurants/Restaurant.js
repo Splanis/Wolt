@@ -41,7 +41,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
                 </RestaurantDetails>
                 <RestaurantInfo {...layoutProps}>
                     Delivery: {delivery_price / 100}€
-                    <RestaurantTags>
+                    <RestaurantTags {...layoutProps}>
                         {tags.map(tag => (
                             <Tag {...layoutProps} key={tag}>
                                 {tag}
@@ -58,8 +58,8 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
 const RestaurantCard = styled.div`
     display: flex;
     flex-direction: ${props => (props.isGrid ? "column" : "row")};
-    width: ${props => (props.isGrid ? "340px" : "750px")};
-    height: ${props => (props.isGrid ? "380px" : "170px")};
+    width: ${props => (props.isGrid ? "340px" : "1100px")};
+    height: ${props => (props.isGrid ? "380px" : "120px")};
     border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin: 10px;
@@ -81,8 +81,8 @@ const RestaurantCard = styled.div`
 `;
 
 const RestaurantImage = styled.div`
-    width: ${props => (props.isGrid ? "100%" : "250px")};
-    min-height: ${props => (props.isGrid ? "270px" : "170px")};
+    width: ${props => (props.isGrid ? "100%" : "200px")};
+    min-height: ${props => (props.isGrid ? "270px" : "120px")};
     overflow: hidden;
     border-radius: ${props => (props.isGrid ? "3px 3px 0 0" : "3px 0 0 3px")};
     position: relative;
@@ -106,8 +106,12 @@ const RestaurantImage = styled.div`
 const RestaurantContent = styled.div`
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: ${props => (props.isGrid ? "column" : "row")};
     text-align: center;
+
+    @media (max-width: 735px) {
+        flex-direction: column;
+    }
 `;
 
 const RestaurantDetails = styled.div`
@@ -119,28 +123,36 @@ const RestaurantDetails = styled.div`
 
     h2 {
         font-size: ${props => (props.isGrid ? "1.4rem" : "1.7rem")};
-        margin: auto;
-        padding-top: 2px;
+        margin:  ${props => (props.isGrid ? "auto" : "5px")};
+        padding-top: ${props => (props.isGrid ? "3px" : "0")};
     }
 
     p {
         font-size: ${props => (props.isGrid ? "1.1rem" : "1.3rem")};
-        margin: auto;
+        margin:  ${props => (props.isGrid ? "auto" : "5px")};
+        padding-bottom: ${props => (props.isGrid ? "3px" : "0")};
     }
 
     @media (max-width: 735px) {
         h2 {
             font-size: 1.4rem;
+            padding-top: 3px;
         }
 
         p {
             font-size: 1.1rem;
+            padding-bottom: 3px;
+        }
+
+        h2, p {
+            margin: auto;
         }
     }
 `;
 
 const RestaurantInfo = styled.div`
     display: flex;
+    flex-direction: ${props => (props.isGrid ? "row" : "column")};
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -152,14 +164,20 @@ const RestaurantInfo = styled.div`
 
     @media (max-width: 735px) {
         font-size: 0.95rem;
+        flex-direction: row;
     }
 `;
 
 const RestaurantTags = styled.div`
     display: flex;
+    flex-direction: ${props => (props.isGrid ? "row" : "column")};
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 735px) {
+        flex-direction: row;
+    }
 `;
 
 const Tag = styled.p`
@@ -167,6 +185,7 @@ const Tag = styled.p`
     line-height: 24px;
     position: relative;
     margin-left: 15px;
+    margin-top: ${props => (props.isGrid ? "0" : "5px")};
     padding: 0 5px 0 10px;
     background: #333333;
     -webkit-border-bottom-right-radius: 3px;
@@ -208,6 +227,7 @@ const Tag = styled.p`
 
     @media (max-width: 735px) {
         font-size: 0.8rem;
+        margin-top: 0;
     }
 `;
 
@@ -215,7 +235,7 @@ const Offline = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     text-shadow: 0px 0px 20px #000000;
     position: absolute;
