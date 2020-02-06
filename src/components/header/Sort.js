@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { RestaurantsContext } from "../context/RestaurantsContext";
-import Button from "../sharedStyles/Button";
-import { ActiveButton } from "../sharedStyles/Button";
+import Button from "../shared/Button";
+import { ActiveButton } from "../shared/Button";
 import styled from "styled-components";
 
 const Sort = () => {
