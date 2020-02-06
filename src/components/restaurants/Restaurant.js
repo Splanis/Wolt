@@ -13,7 +13,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
             resolutionX={32}
             resolutionY={32}
             punch={1}
-            style={{ filter: online ? "none" : "grayscale(100%)" }}
+            style={{ filter: online ? "none" : "grayscale(100%)", height: "100%" }}
         />
     );
 
@@ -31,7 +31,7 @@ const Restaurant = ({ name, description, image, blurhash, delivery_price, tags, 
             <RestaurantImage {...layoutProps}>
                 <ProgressiveImage src={image}>
                     {(image, loading) => {
-                        // ProgressiveImage Component loads placeholder (Blurhash Component) while loading the real image
+                        // ProgressiveImage Component loads placeholder (Blurhash) while loading the real image
                         return loading ? placeholder : <img src={image} alt="" style={{ filter: online ? "none" : "grayscale(100%)" }} />;
                         // If the restaurant is not online, it gets className 'closed' which means it has black & white image
                     }}
@@ -115,6 +115,7 @@ const RestaurantContent = styled.div`
     display: flex;
     flex-direction: ${props => (props.isGrid ? "column" : "row")};
     text-align: center;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #efefee 100%);
 
     @media (max-width: 735px) {
         flex-direction: column;
@@ -166,7 +167,6 @@ const RestaurantInfo = styled.div`
     flex-wrap: wrap;
     color: #4d4d4d;
     font-size: ${props => (props.isGrid ? "0.95rem" : "1.1rem")};
-    background-color: #f6f6f6;
     width: 100%;
     flex: 1;
 
@@ -249,6 +249,8 @@ const Offline = styled.p`
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
 `;
 
 export default Restaurant;
