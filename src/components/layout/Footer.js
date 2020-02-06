@@ -16,6 +16,7 @@ const FooterContain = styled.footer`
     background-color: #333333;
     color: white;
     padding: 30px;
+    margin-top: 10px;
 `;
 
 export default Footer;
