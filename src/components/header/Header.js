@@ -8,7 +8,7 @@ const Header = ({ toGrid, toList, isGrid }) => {
     // Getting the restaurants data from our Restaurants Context API
     const [restaurants] = useContext(RestaurantsContext);
 
-    // Get how much restaurants are online
+    // Getting how much restaurants are online
     const restaurantsOnline = restaurants.filter(restaurant => restaurant.online === true).length;
 
     return (
@@ -30,6 +30,7 @@ const HeaderContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding: 0 5px;
 `;
 
 const OpenRestaurants = styled.h1`

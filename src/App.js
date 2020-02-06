@@ -33,7 +33,6 @@ const Container = styled.div`
     flex-direction: column;
     margin: auto;
     max-width: 1110px;
-    padding: 0 10px;
 `;
 
 export default App;
