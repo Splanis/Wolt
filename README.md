@@ -61,5 +61,5 @@ react-progressive-image Component to display the blurhash while loading the real
 My name is Marios, I was born in Greece and I currently live in Athens. I study Computer Science in University of West Attica and I am going
 to graduate next year. I took programming up about 5 months ago with HTML, CSS, Javascript and Python. This project was really challenging
 for me as I had no experience with Javascript's Frameworks and this was my first project with React, but I found this library really awesome
-and I love working with it. Currently I am looking for an internship to complete my studies and moving abroad to work and learing in a
+and I love working with it. Currently I am looking for an internship to complete my studies and moving abroad to work and learn in a
 company like Wolt seems really adventurous.
