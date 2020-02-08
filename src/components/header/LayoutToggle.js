@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LayoutContext } from "../context/LayoutContext";
-import Button from "../shared/Button";
-import { ActiveButton } from "../shared/Button";
+import Button from "../sharedStyles/Button";
+import { ActiveButton } from "../sharedStyles/Button";
 import styled from "styled-components";
 import gridIcon from "../../assets/icons/grid.png";
 import listIcon from "../../assets/icons/list.png";
