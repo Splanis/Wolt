@@ -1,4 +1,4 @@
-# Wolt Summer 2020 Internships - Engineering Pre-assignment Front End Project
+# Wolt Frontend Summer 2020 Engineering Internship Pre-assignment
 
 This is my pre-assignment task for Wolt's engineering intern position.
 
